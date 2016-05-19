@@ -80,7 +80,7 @@ public class ComponentBuilder {
 		Definition def=reader.readWSDL(null, serviceinfo.getWsdllocation());
 		
 		//获取schema
-		wsdlTypes = createSchemaFromTypes(def);//从Definition 中生成schema
+		wsdlTypes = createSchemaFromTypes(def,serviceinfo);//从Definition 中生成schema
 		
 		//构建服务
 		Map services=def.getServices();
@@ -96,7 +96,7 @@ public class ComponentBuilder {
 	 * @param wsdlDefinition
 	 * @return
 	 */
-	protected Vector createSchemaFromTypes(Definition wsdlDefinition) {
+	protected Vector createSchemaFromTypes(Definition wsdlDefinition,ServiceInfo serviceinfo) {
 		Vector<Schema> schemas=new Vector<Schema>();
 		Element schemaElementt=null;
 		if (wsdlDefinition.getTypes()!= null) {
@@ -106,7 +106,7 @@ public class ComponentBuilder {
 				ExtensibilityElement schemaElement = (ExtensibilityElement) schemaExtElem.elementAt(i);
 				if (schemaElement != null&& schemaElement instanceof UnknownExtensibilityElement) {
 					schemaElementt = ((UnknownExtensibilityElement) schemaElement).getElement();
-					Schema schema = createSchemaFromType(schemaElementt,wsdlDefinition);
+					Schema schema = createSchemaFromType(schemaElementt,wsdlDefinition,serviceinfo);
 					schemas.add(schema);
 				}
 			}
@@ -121,7 +121,7 @@ public class ComponentBuilder {
 	 * @return
 	 */
 	private Schema createSchemaFromType(org.w3c.dom.Element schemaElement,
-			Definition wsdlDefinition) {
+			Definition wsdlDefinition,ServiceInfo serviceinfo) {
 		if (schemaElement == null) {
 			System.err.println("Unable to find schema extensibility element in WSDL");
 			return null;
@@ -132,6 +132,10 @@ public class ComponentBuilder {
 			System.err.println("Unable to read schema defined in WSDL");
 			return null;
 		}
+		//获取目标命名空间
+		String targetNamespace = wsdlDefinition.getTargetNamespace();
+		serviceinfo.setTargetnamespace(targetNamespace);
+		
 		Map namespaces = wsdlDefinition.getNamespaces();
 		if (namespaces != null && !namespaces.isEmpty()) {
 			Iterator nsIter = namespaces.keySet().iterator();

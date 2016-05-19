@@ -14,7 +14,7 @@ public class ServiceInfo {
 	private String name;
 	private String wsdllocation;// wsdl url地址
 	private String endpoint;
-	private String targetnamespace;
+	private String targetnamespace;//目标命名空间
 	private Schema wsdlType;
 
 	/** The list of operations that this service defines. */

@@ -264,7 +264,14 @@ public class OperationInfo {
 		return style;
 	}
 
+	@Override
 	public String toString() {
-		return getTargetMethodName();
+		return "OperationInfo [operationType=" + operationType + ", encodingStyle=" + encodingStyle + ", targetURL="
+				+ targetURL + ", namespaceURI=" + namespaceURI + ", targetObjectURI=" + targetObjectURI
+				+ ", targetMethodName=" + targetMethodName + ", inputMessageText=" + inputMessageText
+				+ ", outputMessageText=" + outputMessageText + ", inputMessageName=" + inputMessageName
+				+ ", outputMessageName=" + outputMessageName + ", soapActionURI=" + soapActionURI + ", style=" + style
+				+ ", inparameters=" + inparameters + ", outparameters=" + outparameters + ", inmessage=" + inmessage
+				+ ", outmessage=" + outmessage + ", wsdltypes=" + wsdltypes + ", serviceid=" + serviceid + "]";
 	}
 }

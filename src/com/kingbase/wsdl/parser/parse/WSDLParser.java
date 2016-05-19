@@ -1,4 +1,4 @@
-package com.kingbase.wsdl.parser;
+package com.kingbase.wsdl.parser.parse;
 
 import java.util.Iterator;
 import java.util.List;
@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import com.kingbase.wsdl.parser.info.OperationInfo;
 import com.kingbase.wsdl.parser.info.ParameterInfo;
 import com.kingbase.wsdl.parser.info.ServiceInfo;
+import com.kingbase.wsdl.parser.util.CacheUtil;
 import com.kingbase.wsdl.parser.util.ComponentBuilder;
 
 /**
@@ -23,13 +24,23 @@ public class WSDLParser {
 	 * @param url
 	 * @return
 	 */
-	public ServiceInfo parse(String url){
+	public ServiceInfo parse(String uri){
+		if(uri==null){
+			throw new IllegalArgumentException();
+		}
+		//缓存中存在 直接获取
+		if(CacheUtil.contains(uri)){
+			return CacheUtil.get(uri);
+		}
 		ServiceInfo serviceInfo = new ServiceInfo();
 		ComponentBuilder builder = new ComponentBuilder();
 		try {
-			serviceInfo.setWsdllocation(url);
+			serviceInfo.setWsdllocation(uri);
 			
 			serviceInfo = builder.buildserviceinformation(serviceInfo);
+			
+			//缓存 搜索结果
+			CacheUtil.put(uri, serviceInfo);
 		} catch (Exception e) {
 			log.error("解析wsdl异常",e);
 		}
@@ -57,7 +68,6 @@ public class WSDLParser {
 		while (iter.hasNext()) {
 			i++;
 			OperationInfo oper = (OperationInfo) iter.next();
-			System.out.println("");
 			System.out.println("操作:" + i + " " + oper.getTargetMethodName());
 			List<ParameterInfo> inps = oper.getInparameters();
 			List<ParameterInfo> outps = oper.getOutparameters();
@@ -92,5 +102,6 @@ public class WSDLParser {
 		WSDLParser parser=new WSDLParser();
 		ServiceInfo serviceInfo = parser.parse(wsdllocation);
 		parser.print(serviceInfo);
+		System.out.println(serviceInfo);
 	}
 }

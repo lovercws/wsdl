@@ -78,4 +78,9 @@ public class ParameterInfo {
 		this.name = name;
 	}
 
+	@Override
+	public String toString() {
+		return "ParameterInfo [name=" + name + ", kind=" + kind + ", id=" + id + ", value=" + value + ", serviceid="
+				+ serviceid + ", operationname=" + operationname + ", inputtype=" + inputtype + ", type=" + type + "]";
+	}
 }

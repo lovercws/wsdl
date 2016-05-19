@@ -73,7 +73,7 @@ public class XMLSupport {
 
 	public static Schema convertElementToSchema(Element element) throws IOException {
 		String content = outputString(element);
-		System.out.println(content);
+		//System.out.println(content);
 		if (content != null) {
 			return readSchema(new StringReader(content));
 		}
