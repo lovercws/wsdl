@@ -1,703 +1,165 @@
-2016-05-18 16:01:32,040 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.net.UnknownHostException: webservice.webxml.com.cn
- 2016-05-18 16:01:48,540 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.net.UnknownHostException: webservice.webxml.com.cn
- 2016-05-18 16:02:51,886 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.net.UnknownHostException: webservice.webxml.com.cn
- 2016-05-18 16:03:54,045 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.net.SocketTimeoutException: connect timed out
- 2016-05-18 16:03:59,875 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.net.SocketTimeoutException: connect timed out
- 2016-05-18 16:06:08,996 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.io.IOException: Server returned HTTP response code: 500 for URL: http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl
- 2016-05-18 16:06:45,342 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.io.IOException: Server returned HTTP response code: 500 for URL: http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl
- 2016-05-18 16:07:02,339 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.io.IOException: Server returned HTTP response code: 500 for URL: http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl
- 2016-05-18 16:08:14,511 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.io.IOException: Server returned HTTP response code: 500 for URL: http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl
- 2016-05-18 16:34:50,778 [main] [org.apache.http.client.protocol.RequestAddCookies] [DEBUG] - CookieSpec selected: default
- 2016-05-18 16:34:50,797 [main] [org.apache.http.client.protocol.RequestAuthCache] [DEBUG] - Auth cache not set in the context
- 2016-05-18 16:34:50,800 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection request: [route: {}->http://www.webxml.com.cn:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
- 2016-05-18 16:34:50,824 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection leased: [id: 0][route: {}->http://www.webxml.com.cn:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
- 2016-05-18 16:34:50,827 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Opening connection {}->http://www.webxml.com.cn:80
- 2016-05-18 16:34:50,836 [main] [org.apache.http.impl.conn.DefaultHttpClientConnectionOperator] [DEBUG] - Connecting to www.webxml.com.cn/61.147.124.120:80
- 2016-05-18 16:34:50,872 [main] [org.apache.http.impl.conn.DefaultHttpClientConnectionOperator] [DEBUG] - Connection established 192.168.8.144:57156<->61.147.124.120:80
- 2016-05-18 16:34:50,872 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Executing request GET /webservices/ChinaStockSmallImageWS.asmx?wsdl HTTP/1.1
- 2016-05-18 16:34:50,872 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Target auth state: UNCHALLENGED
- 2016-05-18 16:34:50,873 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Proxy auth state: UNCHALLENGED
- 2016-05-18 16:34:50,874 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> GET /webservices/ChinaStockSmallImageWS.asmx?wsdl HTTP/1.1
- 2016-05-18 16:34:50,874 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> Host: www.webxml.com.cn
- 2016-05-18 16:34:50,874 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> Connection: Keep-Alive
- 2016-05-18 16:34:50,875 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.7.0_79)
- 2016-05-18 16:34:50,875 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> Accept-Encoding: gzip,deflate
- 2016-05-18 16:34:50,875 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "GET /webservices/ChinaStockSmallImageWS.asmx?wsdl HTTP/1.1[\r][\n]"
- 2016-05-18 16:34:50,876 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "Host: www.webxml.com.cn[\r][\n]"
- 2016-05-18 16:34:50,876 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
- 2016-05-18 16:34:50,876 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.7.0_79)[\r][\n]"
- 2016-05-18 16:34:50,877 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
- 2016-05-18 16:34:50,877 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "[\r][\n]"
- 2016-05-18 16:34:50,982 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
- 2016-05-18 16:34:50,983 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Date: Wed, 18 May 2016 08:35:22 GMT[\r][\n]"
- 2016-05-18 16:34:50,983 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Server: Microsoft-IIS/6.0[\r][\n]"
- 2016-05-18 16:34:50,983 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "X-Powered-By: ASP.NET[\r][\n]"
- 2016-05-18 16:34:50,984 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "X-AspNet-Version: 2.0.50727[\r][\n]"
- 2016-05-18 16:34:50,984 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]"
- 2016-05-18 16:34:50,984 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Content-Type: text/xml; charset=utf-8[\r][\n]"
- 2016-05-18 16:34:50,984 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Content-Length: 14359[\r][\n]"
- 2016-05-18 16:34:50,985 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "[\r][\n]"
- 2016-05-18 16:34:50,985 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
- 2016-05-18 16:34:50,985 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WebXml.com.cn/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://WebXml.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[\r][\n]"
- 2016-05-18 16:34:50,990 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; &lt;strong&gt;[0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xef][0xbc][0x88][0xe6][0x94][0xaf][0xe6][0x8c][0x81][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x92][0x8c][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe5][0xb8][0x82][0xe7][0x9a][0x84][0xe5][0x85][0xa8][0xe9][0x83][0xa8][0xe5][0x9f][0xba][0xe9][0x87][0x91][0xe3][0x80][0x81][0xe5][0x80][0xba][0xe5][0x88][0xb8][0xe5][0x92][0x8c][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xef][0xbc][0x89]&lt;/strong&gt;[0xef][0xbc][0x8c][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xe5][0x8d][0xb3][0xe6][0x97][0xb6][0xe6][0x9b][0xb4][0xe6][0x96][0xb0][0xe3][0x80][0x82][0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe4][0xbb][0x85][0xe4][0xbd][0x9c][0xe4][0xb8][0xba][0xe7][0x94][0xa8][0xe6][0x88][0xb7][0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe4][0xb9][0x8b][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe5][0xb9][0xb6][0xe4][0xb8][0x8d][0xe6][0x9e][0x84][0xe6][0x88][0x90][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe5][0xbb][0xba][0xe8][0xae][0xae][0xe3][0x80][0x82]&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; [0xe5][0x92][0x8c]/[0xe6][0x88][0x96][0xe5][0x85][0xb6][0xe5][0x90][0x84][0xe4][0xbe][0x9b][0xe5][0xba][0x94][0xe5][0x95][0x86][0xe4][0xb8][0x8d][0xe4][0xb8][0xba][0xe6][0x9c][0xac][0xe9][0xa1][0xb5][0xe9][0x9d][0xa2][0xe6][0x8f][0x90][0xe4][0xbe][0x9b][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe7][0x9a][0x84][0xe9][0x94][0x99][0xe8][0xaf][0xaf][0xe3][0x80][0x81][0xe6][0xae][0x8b][0xe7][0xbc][0xba][0xe3][0x80][0x81][0xe5][0xbb][0xb6][0xe8][0xbf][0x9f][0xe6][0x88][0x96][0xe5][0x9b][0xa0][0xe4][0xbe][0x9d][0xe9][0x9d][0xa0][0xe6][0xad][0xa4][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe6][0x89][0x80][0xe9][0x87][0x87][0xe5][0x8f][0x96][0xe7][0x9a][0x84][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe8][0xa1][0x8c][0xe5][0x8a][0xa8][0xe8][0xb4][0x9f][0xe8][0xb4][0xa3][0xe3][0x80][0x82]&lt;strong&gt;[0xe5][0xb8][0x82][0xe5][0x9c][0xba][0xe6][0x9c][0x89][0xe9][0xa3][0x8e][0xe9][0x99][0xa9][0xef][0xbc][0x8c][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe9][0x9c][0x80][0xe8][0xb0][0xa8][0xe6][0x85][0x8e]&lt;/strong&gt;[0xe3][0x80][0x82]&lt;br /&gt;[0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe6][0x95][0xb0][0xe6][0x8d][0xae]Web Services[0xe8][0xaf][0xb7][0xe4][0xb8][0x8d][0xe8][0xa6][0x81][0xe7][0x94][0xa8][0xe4][0xba][0x8e][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe5][0x95][0x86][0xe4][0xb8][0x9a][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe8][0x8b][0xa5][0xe6][0x9c][0x89][0xe9][0x9c][0x80][0xe8][0xa6][0x81][0xe8][0xaf][0xb7]&lt;a href="http://www.webxml.com.cn/zh_cn/contact_us.aspx" target="_blank"&gt;[0xe8][0x81][0x94][0xe7][0xb3][0xbb][0xe6][0x88][0x91][0xe4][0xbb][0xac]&lt;/a&gt;[0xef][0xbc][0x8c][0xe6][0xac][0xa2][0xe8][0xbf][0x8e][0xe6][0x8a][0x80][0xe6][0x9c][0xaf][0xe4][0xba][0xa4][0xe6][0xb5][0x81][0xe3][0x80][0x82] QQ[0xef][0xbc][0x9a]8409035&lt;br /&gt;&lt;strong&gt;[0xe4][0xbd][0xbf][0xe7][0x94][0xa8][0xe6][0x9c][0xac][0xe7][0xab][0x99] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe8][0xaf][0xb7][0xe6][0xb3][0xa8][0xe6][0x98][0x8e][0xe6][0x88][0x96][0xe9][0x93][0xbe][0xe6][0x8e][0xa5][0xe6][0x9c][0xac][0xe7][0xab][0x99][0xef][0xbc][0x9a]http://www.webxml.com.cn/ [0xe6][0x84][0x9f][0xe8][0xb0][0xa2][0xe5][0xa4][0xa7][0xe5][0xae][0xb6][0xe7][0x9a][0x84][0xe6][0x94][0xaf][0xe6][0x8c][0x81]&lt;/strong&gt;[0xef][0xbc][0x81]&lt;br /&gt;&lt;br /&gt;&lt;span style="color:#D20000;"&gt;&lt;strong&gt;[0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe6][0xb3][0xa8][0xe6][0x84][0x8f][0xe4][0xba][0x8b][0xe9][0xa1][0xb9]&lt;/strong&gt;[0xef][0xbc][0x9a][0xe5][0x9b][0xa0][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x92][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe4][0xb8][0x8a][0xe6][0x9c][0x89][0xe9][0x87][0x8d][0xe5][0x8f][0xa0][0xef][0xbc][0x8c][0xe6][0x89][0x80][0xe4][0xbb][0xa5][0xe5][0x9c][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xaf][0xb7][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe5][0x89][0x8d][0xe5][0x8a][0xa0] SH[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x8a][0xa0] SZ[0xef][0xbc][0x88][0xe4][0xb8][0x8d][0xe5][0x8c][0xba][0xe5][0x88][0x86][0xe5][0xa4][0xa7][0xe5][0xb0][0x8f][0xe5][0x86][0x99][0xef][0xbc][0x89][0xef][0xbc][0x8c][0xe4][0xbe][0x8b][0xef][0xbc][0x9a][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x8f][0x91][0xe5][0xb1][0x95]A sz000001[0xe3][0x80][0x82][0xe5][0xa6][0x82][0xe4][0xb8][0x8d][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe9][0xbb][0x98][0xe8][0xae][0xa4][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:50,991 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:types>[\r][\n]"
- 2016-05-18 16:34:50,991 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <s:schema elementFormDefault="qualified" targetNamespace="http://WebXml.com.cn/">[\r][\n]"
- 2016-05-18 16:34:50,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:50,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType>[\r][\n]"
- 2016-05-18 16:34:50,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          <s:sequence>[\r][\n]"
- 2016-05-18 16:34:50,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="0" maxOccurs="1" name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:50,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="1" maxOccurs="1" name="theImageType" type="s:unsignedByte" />[\r][\n]"
- 2016-05-18 16:34:50,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          </s:sequence>[\r][\n]"
- 2016-05-18 16:34:50,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        </s:complexType>[\r][\n]"
- 2016-05-18 16:34:50,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:34:50,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImageResponse">[\r][\n]"
- 2016-05-18 16:34:50,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType />[\r][\n]"
- 2016-05-18 16:34:50,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:34:50,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:50,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType>[\r][\n]"
- 2016-05-18 16:34:50,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          <s:sequence>[\r][\n]"
- 2016-05-18 16:34:50,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="0" maxOccurs="1" name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:50,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="1" maxOccurs="1" name="theImageType" type="s:unsignedByte" />[\r][\n]"
- 2016-05-18 16:34:50,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          </s:sequence>[\r][\n]"
- 2016-05-18 16:34:50,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        </s:complexType>[\r][\n]"
- 2016-05-18 16:34:50,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:34:50,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImageByteResponse">[\r][\n]"
- 2016-05-18 16:34:50,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType>[\r][\n]"
- 2016-05-18 16:34:50,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          <s:sequence>[\r][\n]"
- 2016-05-18 16:34:50,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="0" maxOccurs="1" name="getSmallImageByteResult" type="s:base64Binary" />[\r][\n]"
- 2016-05-18 16:34:50,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          </s:sequence>[\r][\n]"
- 2016-05-18 16:34:50,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        </s:complexType>[\r][\n]"
- 2016-05-18 16:34:50,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:34:50,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />[\r][\n]"
- 2016-05-18 16:34:50,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </s:schema>[\r][\n]"
- 2016-05-18 16:34:50,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:types>[\r][\n]"
- 2016-05-18 16:34:50,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageSoapIn">[\r][\n]"
- 2016-05-18 16:34:50,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImage" />[\r][\n]"
- 2016-05-18 16:34:50,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:50,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageSoapOut">[\r][\n]"
- 2016-05-18 16:34:50,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImageResponse" />[\r][\n]"
- 2016-05-18 16:34:50,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:50,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteSoapIn">[\r][\n]"
- 2016-05-18 16:34:50,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImageByte" />[\r][\n]"
- 2016-05-18 16:34:50,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:50,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteSoapOut">[\r][\n]"
- 2016-05-18 16:34:50,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImageByteResponse" />[\r][\n]"
- 2016-05-18 16:34:51,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpGetIn">[\r][\n]"
- 2016-05-18 16:34:51,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpGetOut" />[\r][\n]"
- 2016-05-18 16:34:51,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpGetIn">[\r][\n]"
- 2016-05-18 16:34:51,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpGetOut">[\r][\n]"
- 2016-05-18 16:34:51,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="Body" element="tns:base64Binary" />[\r][\n]"
- 2016-05-18 16:34:51,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpPostIn">[\r][\n]"
- 2016-05-18 16:34:51,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpPostOut" />[\r][\n]"
- 2016-05-18 16:34:51,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpPostIn">[\r][\n]"
- 2016-05-18 16:34:51,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:34:51,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpPostOut">[\r][\n]"
- 2016-05-18 16:34:51,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="Body" element="tns:base64Binary" />[\r][\n]"
- 2016-05-18 16:34:51,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:34:51,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:portType name="ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:34:51,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe]&lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageSoapIn" />[\r][\n]"
- 2016-05-18 16:34:51,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageSoapOut" />[\r][\n]"
- 2016-05-18 16:34:51,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84] &lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89][0xef][0xbc][0x9b] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageByteSoapIn" />[\r][\n]"
- 2016-05-18 16:34:51,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageByteSoapOut" />[\r][\n]"
- 2016-05-18 16:34:51,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:portType>[\r][\n]"
- 2016-05-18 16:34:51,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:portType name="ChinaStockSmallImageWSHttpGet">[\r][\n]"
- 2016-05-18 16:34:51,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe]&lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageHttpGetIn" />[\r][\n]"
- 2016-05-18 16:34:51,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageHttpGetOut" />[\r][\n]"
- 2016-05-18 16:34:51,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84] &lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89][0xef][0xbc][0x9b] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageByteHttpGetIn" />[\r][\n]"
- 2016-05-18 16:34:51,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageByteHttpGetOut" />[\r][\n]"
- 2016-05-18 16:34:51,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:portType>[\r][\n]"
- 2016-05-18 16:34:51,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:portType name="ChinaStockSmallImageWSHttpPost">[\r][\n]"
- 2016-05-18 16:34:51,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe]&lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theIma"
- 2016-05-18 16:34:51,013 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << HTTP/1.1 200 OK
- 2016-05-18 16:34:51,013 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Date: Wed, 18 May 2016 08:35:22 GMT
- 2016-05-18 16:34:51,014 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Server: Microsoft-IIS/6.0
- 2016-05-18 16:34:51,014 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << X-Powered-By: ASP.NET
- 2016-05-18 16:34:51,014 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << X-AspNet-Version: 2.0.50727
- 2016-05-18 16:34:51,014 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Cache-Control: private, max-age=0
- 2016-05-18 16:34:51,014 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Content-Type: text/xml; charset=utf-8
- 2016-05-18 16:34:51,015 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Content-Length: 14359
- 2016-05-18 16:34:51,020 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Connection can be kept alive indefinitely
- 2016-05-18 16:34:51,025 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "geType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,026 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageHttpPostIn" />[\r][\n]"
- 2016-05-18 16:34:51,026 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageHttpPostOut" />[\r][\n]"
- 2016-05-18 16:34:51,026 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,026 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,026 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84] &lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89][0xef][0xbc][0x9b] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,026 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageByteHttpPostIn" />[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageByteHttpPostOut" />[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:portType>[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSSoap" type="tns:ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap:operation soapAction="http://WebXml.com.cn/getSmallImage" style="document" />[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap:operation soapAction="http://WebXml.com.cn/getSmallImageByte" style="document" />[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSSoap12" type="tns:ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />[\r][\n]"
- 2016-05-18 16:34:51,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap12:operation soapAction="http://WebXml.com.cn/getSmallImage" style="document" />[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap12:operation soapAction="http://WebXml.com.cn/getSmallImageByte" style="document" />[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSHttpGet" type="tns:ChinaStockSmallImageWSHttpGet">[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <http:binding verb="GET" />[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImage" />[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <http:urlEncoded />[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output />[\r][\n]"
- 2016-05-18 16:34:51,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImageByte" />[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <http:urlEncoded />[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:mimeXml part="Body" />[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSHttpPost" type="tns:ChinaStockSmallImageWSHttpPost">[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <http:binding verb="POST" />[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImage" />[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:content type="application/x-www-form-urlencoded" />[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output />[\r][\n]"
- 2016-05-18 16:34:51,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:34:51,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImageByte" />[\r][\n]"
- 2016-05-18 16:34:51,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:content type="application/x-www-form-urlencoded" />[\r][\n]"
- 2016-05-18 16:34:51,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:34:51,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:mimeXml part="Body" />[\r][\n]"
- 2016-05-18 16:34:51,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:34:51,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:34:51,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:34:51,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:service name="ChinaStockSmallImageWS">[\r][\n]"
- 2016-05-18 16:34:51,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; &lt;strong&gt;[0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xef][0xbc][0x88][0xe6][0x94][0xaf][0xe6][0x8c][0x81][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x92][0x8c][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe5][0xb8][0x82][0xe7][0x9a][0x84][0xe5][0x85][0xa8][0xe9][0x83][0xa8][0xe5][0x9f][0xba][0xe9][0x87][0x91][0xe3][0x80][0x81][0xe5][0x80][0xba][0xe5][0x88][0xb8][0xe5][0x92][0x8c][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xef][0xbc][0x89]&lt;/strong&gt;[0xef][0xbc][0x8c][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xe5][0x8d][0xb3][0xe6][0x97][0xb6][0xe6][0x9b][0xb4][0xe6][0x96][0xb0][0xe3][0x80][0x82][0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe4][0xbb][0x85][0xe4][0xbd][0x9c][0xe4][0xb8][0xba][0xe7][0x94][0xa8][0xe6][0x88][0xb7][0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe4][0xb9][0x8b][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe5][0xb9][0xb6][0xe4][0xb8][0x8d][0xe6][0x9e][0x84][0xe6][0x88][0x90][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe5][0xbb][0xba][0xe8][0xae][0xae][0xe3][0x80][0x82]&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; [0xe5][0x92][0x8c]/[0xe6][0x88][0x96][0xe5][0x85][0xb6][0xe5][0x90][0x84][0xe4][0xbe][0x9b][0xe5][0xba][0x94][0xe5][0x95][0x86][0xe4][0xb8][0x8d][0xe4][0xb8][0xba][0xe6][0x9c][0xac][0xe9][0xa1][0xb5][0xe9][0x9d][0xa2][0xe6][0x8f][0x90][0xe4][0xbe][0x9b][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe7][0x9a][0x84][0xe9][0x94][0x99][0xe8][0xaf][0xaf][0xe3][0x80][0x81][0xe6][0xae][0x8b][0xe7][0xbc][0xba][0xe3][0x80][0x81][0xe5][0xbb][0xb6][0xe8][0xbf][0x9f][0xe6][0x88][0x96][0xe5][0x9b][0xa0][0xe4][0xbe][0x9d][0xe9][0x9d][0xa0][0xe6][0xad][0xa4][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe6][0x89][0x80][0xe9][0x87][0x87][0xe5][0x8f][0x96][0xe7][0x9a][0x84][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe8][0xa1][0x8c][0xe5][0x8a][0xa8][0xe8][0xb4][0x9f][0xe8][0xb4][0xa3][0xe3][0x80][0x82]&lt;strong&gt;[0xe5][0xb8][0x82][0xe5][0x9c][0xba][0xe6][0x9c][0x89][0xe9][0xa3][0x8e][0xe9][0x99][0xa9][0xef][0xbc][0x8c][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe9][0x9c][0x80][0xe8][0xb0][0xa8][0xe6][0x85][0x8e]&lt;/strong&gt;[0xe3][0x80][0x82]&lt;br /&gt;[0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe6][0x95][0xb0][0xe6][0x8d][0xae]Web Services[0xe8][0xaf][0xb7][0xe4][0xb8][0x8d][0xe8][0xa6][0x81][0xe7][0x94][0xa8][0xe4][0xba][0x8e][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe5][0x95][0x86][0xe4][0xb8][0x9a][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe8][0x8b][0xa5][0xe6][0x9c][0x89][0xe9][0x9c][0x80][0xe8][0xa6][0x81][0xe8][0xaf][0xb7]&lt;a href="http://www.webxml.com.cn/zh_cn/contact_us.aspx" target="_blank"&gt;[0xe8][0x81][0x94][0xe7][0xb3][0xbb][0xe6][0x88][0x91][0xe4][0xbb][0xac]&lt;/a&gt;[0xef][0xbc][0x8c][0xe6][0xac][0xa2][0xe8][0xbf][0x8e][0xe6][0x8a][0x80][0xe6][0x9c][0xaf][0xe4][0xba][0xa4][0xe6][0xb5][0x81][0xe3][0x80][0x82] QQ[0xef][0xbc][0x9a]8409035&lt;br /&gt;&lt;stro"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "ng&gt;[0xe4][0xbd][0xbf][0xe7][0x94][0xa8][0xe6][0x9c][0xac][0xe7][0xab][0x99] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe8][0xaf][0xb7][0xe6][0xb3][0xa8][0xe6][0x98][0x8e][0xe6][0x88][0x96][0xe9][0x93][0xbe][0xe6][0x8e][0xa5][0xe6][0x9c][0xac][0xe7][0xab][0x99][0xef][0xbc][0x9a]http://www.webxml.com.cn/ [0xe6][0x84][0x9f][0xe8][0xb0][0xa2][0xe5][0xa4][0xa7][0xe5][0xae][0xb6][0xe7][0x9a][0x84][0xe6][0x94][0xaf][0xe6][0x8c][0x81]&lt;/strong&gt;[0xef][0xbc][0x81]&lt;br /&gt;&lt;br /&gt;&lt;span style="color:#D20000;"&gt;&lt;strong&gt;[0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe6][0xb3][0xa8][0xe6][0x84][0x8f][0xe4][0xba][0x8b][0xe9][0xa1][0xb9]&lt;/strong&gt;[0xef][0xbc][0x9a][0xe5][0x9b][0xa0][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x92][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe4][0xb8][0x8a][0xe6][0x9c][0x89][0xe9][0x87][0x8d][0xe5][0x8f][0xa0][0xef][0xbc][0x8c][0xe6][0x89][0x80][0xe4][0xbb][0xa5][0xe5][0x9c][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xaf][0xb7][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe5][0x89][0x8d][0xe5][0x8a][0xa0] SH[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x8a][0xa0] SZ[0xef][0xbc][0x88][0xe4][0xb8][0x8d][0xe5][0x8c][0xba][0xe5][0x88][0x86][0xe5][0xa4][0xa7][0xe5][0xb0][0x8f][0xe5][0x86][0x99][0xef][0xbc][0x89][0xef][0xbc][0x8c][0xe4][0xbe][0x8b][0xef][0xbc][0x9a][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x8f][0x91][0xe5][0xb1][0x95]A sz000001[0xe3][0x80][0x82][0xe5][0xa6][0x82][0xe4][0xb8][0x8d][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe9][0xbb][0x98][0xe8][0xae][0xa4][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSSoap" binding="tns:ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSSoap12" binding="tns:ChinaStockSmallImageWSSoap12">[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap12:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:34:51,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSHttpGet" binding="tns:ChinaStockSmallImageWSHttpGet">[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSHttpPost" binding="tns:ChinaStockSmallImageWSHttpPost">[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:service>[\r][\n]"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "</wsdl:definitions>"
- 2016-05-18 16:34:51,038 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection [id: 0][route: {}->http://www.webxml.com.cn:80] can be kept alive indefinitely
- 2016-05-18 16:34:51,039 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection released: [id: 0][route: {}->http://www.webxml.com.cn:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
- 2016-05-18 16:34:51,039 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [DEBUG] - 发送请求【http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl】
- 2016-05-18 16:34:51,039 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [DEBUG] - 返回结果  <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WebXml.com.cn/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://WebXml.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; &lt;strong&gt;中国股票行情分时走势预览缩略图 WEB 服务（支持深圳和上海股市的全部基金、债券和股票）&lt;/strong&gt;，数据即时更新。此中国股票走势预览缩略图 WEB 服务仅作为用户获取信息之目的，并不构成投资建议。&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; 和/或其各供应商不为本页面提供信息的错误、残缺、延迟或因依靠此信息所采取的任何行动负责。&lt;strong&gt;市场有风险，投资需谨慎&lt;/strong&gt;。&lt;br /&gt;此中国股票行情数据Web Services请不要用于任何商业目的，若有需要请&lt;a href="http://www.webxml.com.cn/zh_cn/contact_us.aspx" target="_blank"&gt;联系我们&lt;/a&gt;，欢迎技术交流。 QQ：8409035&lt;br /&gt;&lt;strong&gt;使用本站 WEB 服务请注明或链接本站：http://www.webxml.com.cn/ 感谢大家的支持&lt;/strong&gt;！&lt;br /&gt;&lt;br /&gt;&lt;span style="color:#D20000;"&gt;&lt;strong&gt;股票输入注意事项&lt;/strong&gt;：因上海股票和深圳股票在代号上有重叠，所以在输入上海股票请在代号前加 SH，深圳加 SZ（不区分大小写），例：上证指数 sh000001，深发展A sz000001。如不输入股票代号默认上证指数 sh000001&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;</wsdl:documentation>
-  <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://WebXml.com.cn/">
-      <s:element name="getSmallImage">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="theStockCode" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="theImageType" type="s:unsignedByte" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="getSmallImageResponse">
-        <s:complexType />
-      </s:element>
-      <s:element name="getSmallImageByte">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="theStockCode" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="theImageType" type="s:unsignedByte" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="getSmallImageByteResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="getSmallImageByteResult" type="s:base64Binary" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
-    </s:schema>
-  </wsdl:types>
-  <wsdl:message name="getSmallImageSoapIn">
-    <wsdl:part name="parameters" element="tns:getSmallImage" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageSoapOut">
-    <wsdl:part name="parameters" element="tns:getSmallImageResponse" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageByteSoapIn">
-    <wsdl:part name="parameters" element="tns:getSmallImageByte" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageByteSoapOut">
-    <wsdl:part name="parameters" element="tns:getSmallImageByteResponse" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageHttpGetIn">
-    <wsdl:part name="theStockCode" type="s:string" />
-    <wsdl:part name="theImageType" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageHttpGetOut" />
-  <wsdl:message name="getSmallImageByteHttpGetIn">
-    <wsdl:part name="theStockCode" type="s:string" />
-    <wsdl:part name="theImageType" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageByteHttpGetOut">
-    <wsdl:part name="Body" element="tns:base64Binary" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageHttpPostIn">
-    <wsdl:part name="theStockCode" type="s:string" />
-    <wsdl:part name="theImageType" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageHttpPostOut" />
-  <wsdl:message name="getSmallImageByteHttpPostIn">
-    <wsdl:part name="theStockCode" type="s:string" />
-    <wsdl:part name="theImageType" type="s:string" />
-  </wsdl:message>
-  <wsdl:message name="getSmallImageByteHttpPostOut">
-    <wsdl:part name="Body" element="tns:base64Binary" />
-  </wsdl:message>
-  <wsdl:portType name="ChinaStockSmallImageWSSoap">
-    <wsdl:operation name="getSmallImage">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;直接获得中国股票GIF走势预览缩略图&lt;/h3&gt;&lt;p&gt;输入参数：theStockCode 股票代号 String，如：sh000001，theImageType 预览图类型 Byte（必须）：theImageType = 1（小图） 返回数据：股票GIF分时走势预览缩略图。&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>
-      <wsdl:input message="tns:getSmallImageSoapIn" />
-      <wsdl:output message="tns:getSmallImageSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;直接获得中国股票GIF走势预览缩略图字节数组 &lt;/h3&gt;&lt;p&gt;输入参数：theStockCode 股票代号 String，如：sh000001，theImageType 预览图类型 Byte（必须）：theImageType = 1（小图）； 返回数据：股票GIF分时走势预览缩略图字节数组。&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>
-      <wsdl:input message="tns:getSmallImageByteSoapIn" />
-      <wsdl:output message="tns:getSmallImageByteSoapOut" />
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:portType name="ChinaStockSmallImageWSHttpGet">
-    <wsdl:operation name="getSmallImage">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;直接获得中国股票GIF走势预览缩略图&lt;/h3&gt;&lt;p&gt;输入参数：theStockCode 股票代号 String，如：sh000001，theImageType 预览图类型 Byte（必须）：theImageType = 1（小图） 返回数据：股票GIF分时走势预览缩略图。&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>
-      <wsdl:input message="tns:getSmallImageHttpGetIn" />
-      <wsdl:output message="tns:getSmallImageHttpGetOut" />
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;直接获得中国股票GIF走势预览缩略图字节数组 &lt;/h3&gt;&lt;p&gt;输入参数：theStockCode 股票代号 String，如：sh000001，theImageType 预览图类型 Byte（必须）：theImageType = 1（小图）； 返回数据：股票GIF分时走势预览缩略图字节数组。&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>
-      <wsdl:input message="tns:getSmallImageByteHttpGetIn" />
-      <wsdl:output message="tns:getSmallImageByteHttpGetOut" />
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:portType name="ChinaStockSmallImageWSHttpPost">
-    <wsdl:operation name="getSmallImage">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;直接获得中国股票GIF走势预览缩略图&lt;/h3&gt;&lt;p&gt;输入参数：theStockCode 股票代号 String，如：sh000001，theImageType 预览图类型 Byte（必须）：theImageType = 1（小图） 返回数据：股票GIF分时走势预览缩略图。&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>
-      <wsdl:input message="tns:getSmallImageHttpPostIn" />
-      <wsdl:output message="tns:getSmallImageHttpPostOut" />
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;直接获得中国股票GIF走势预览缩略图字节数组 &lt;/h3&gt;&lt;p&gt;输入参数：theStockCode 股票代号 String，如：sh000001，theImageType 预览图类型 Byte（必须）：theImageType = 1（小图）； 返回数据：股票GIF分时走势预览缩略图字节数组。&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>
-      <wsdl:input message="tns:getSmallImageByteHttpPostIn" />
-      <wsdl:output message="tns:getSmallImageByteHttpPostOut" />
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:binding name="ChinaStockSmallImageWSSoap" type="tns:ChinaStockSmallImageWSSoap">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="getSmallImage">
-      <soap:operation soapAction="http://WebXml.com.cn/getSmallImage" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <soap:operation soapAction="http://WebXml.com.cn/getSmallImageByte" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="ChinaStockSmallImageWSSoap12" type="tns:ChinaStockSmallImageWSSoap">
-    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="getSmallImage">
-      <soap12:operation soapAction="http://WebXml.com.cn/getSmallImage" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <soap12:operation soapAction="http://WebXml.com.cn/getSmallImageByte" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="ChinaStockSmallImageWSHttpGet" type="tns:ChinaStockSmallImageWSHttpGet">
-    <http:binding verb="GET" />
-    <wsdl:operation name="getSmallImage">
-      <http:operation location="/getSmallImage" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output />
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <http:operation location="/getSmallImageByte" />
-      <wsdl:input>
-        <http:urlEncoded />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="ChinaStockSmallImageWSHttpPost" type="tns:ChinaStockSmallImageWSHttpPost">
-    <http:binding verb="POST" />
-    <wsdl:operation name="getSmallImage">
-      <http:operation location="/getSmallImage" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output />
-    </wsdl:operation>
-    <wsdl:operation name="getSmallImageByte">
-      <http:operation location="/getSmallImageByte" />
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded" />
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body" />
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:service name="ChinaStockSmallImageWS">
-    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; &lt;strong&gt;中国股票行情分时走势预览缩略图 WEB 服务（支持深圳和上海股市的全部基金、债券和股票）&lt;/strong&gt;，数据即时更新。此中国股票走势预览缩略图 WEB 服务仅作为用户获取信息之目的，并不构成投资建议。&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; 和/或其各供应商不为本页面提供信息的错误、残缺、延迟或因依靠此信息所采取的任何行动负责。&lt;strong&gt;市场有风险，投资需谨慎&lt;/strong&gt;。&lt;br /&gt;此中国股票行情数据Web Services请不要用于任何商业目的，若有需要请&lt;a href="http://www.webxml.com.cn/zh_cn/contact_us.aspx" target="_blank"&gt;联系我们&lt;/a&gt;，欢迎技术交流。 QQ：8409035&lt;br /&gt;&lt;strong&gt;使用本站 WEB 服务请注明或链接本站：http://www.webxml.com.cn/ 感谢大家的支持&lt;/strong&gt;！&lt;br /&gt;&lt;br /&gt;&lt;span style="color:#D20000;"&gt;&lt;strong&gt;股票输入注意事项&lt;/strong&gt;：因上海股票和深圳股票在代号上有重叠，所以在输入上海股票请在代号前加 SH，深圳加 SZ（不区分大小写），例：上证指数 sh000001，深发展A sz000001。如不输入股票代号默认上证指数 sh000001&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;</wsdl:documentation>
-    <wsdl:port name="ChinaStockSmallImageWSSoap" binding="tns:ChinaStockSmallImageWSSoap">
-      <soap:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />
-    </wsdl:port>
-    <wsdl:port name="ChinaStockSmallImageWSSoap12" binding="tns:ChinaStockSmallImageWSSoap12">
-      <soap12:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />
-    </wsdl:port>
-    <wsdl:port name="ChinaStockSmallImageWSHttpGet" binding="tns:ChinaStockSmallImageWSHttpGet">
-      <http:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />
-    </wsdl:port>
-    <wsdl:port name="ChinaStockSmallImageWSHttpPost" binding="tns:ChinaStockSmallImageWSHttpPost">
-      <http:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />
-    </wsdl:port>
-  </wsdl:service>
-</wsdl:definitions>
- 2016-05-18 16:36:17,757 [main] [org.apache.http.client.protocol.RequestAddCookies] [DEBUG] - CookieSpec selected: default
- 2016-05-18 16:36:17,771 [main] [org.apache.http.client.protocol.RequestAuthCache] [DEBUG] - Auth cache not set in the context
- 2016-05-18 16:36:17,773 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection request: [route: {}->http://www.webxml.com.cn:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
- 2016-05-18 16:36:17,797 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection leased: [id: 0][route: {}->http://www.webxml.com.cn:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
- 2016-05-18 16:36:17,799 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Opening connection {}->http://www.webxml.com.cn:80
- 2016-05-18 16:36:17,805 [main] [org.apache.http.impl.conn.DefaultHttpClientConnectionOperator] [DEBUG] - Connecting to www.webxml.com.cn/61.147.124.120:80
- 2016-05-18 16:36:17,845 [main] [org.apache.http.impl.conn.DefaultHttpClientConnectionOperator] [DEBUG] - Connection established 192.168.8.144:57161<->61.147.124.120:80
- 2016-05-18 16:36:17,846 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Executing request GET /webservices/ChinaStockSmallImageWS.asmx?wsdl HTTP/1.1
- 2016-05-18 16:36:17,846 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Target auth state: UNCHALLENGED
- 2016-05-18 16:36:17,847 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Proxy auth state: UNCHALLENGED
- 2016-05-18 16:36:17,849 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> GET /webservices/ChinaStockSmallImageWS.asmx?wsdl HTTP/1.1
- 2016-05-18 16:36:17,849 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> Host: www.webxml.com.cn
- 2016-05-18 16:36:17,849 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> Connection: Keep-Alive
- 2016-05-18 16:36:17,849 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.7.0_79)
- 2016-05-18 16:36:17,849 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 >> Accept-Encoding: gzip,deflate
- 2016-05-18 16:36:17,850 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "GET /webservices/ChinaStockSmallImageWS.asmx?wsdl HTTP/1.1[\r][\n]"
- 2016-05-18 16:36:17,851 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "Host: www.webxml.com.cn[\r][\n]"
- 2016-05-18 16:36:17,852 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
- 2016-05-18 16:36:17,852 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.7.0_79)[\r][\n]"
- 2016-05-18 16:36:17,852 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
- 2016-05-18 16:36:17,852 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 >> "[\r][\n]"
- 2016-05-18 16:36:17,978 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
- 2016-05-18 16:36:17,978 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Date: Wed, 18 May 2016 08:36:49 GMT[\r][\n]"
- 2016-05-18 16:36:17,979 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Server: Microsoft-IIS/6.0[\r][\n]"
- 2016-05-18 16:36:17,979 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "X-Powered-By: ASP.NET[\r][\n]"
- 2016-05-18 16:36:17,979 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "X-AspNet-Version: 2.0.50727[\r][\n]"
- 2016-05-18 16:36:17,979 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Cache-Control: private, max-age=0[\r][\n]"
- 2016-05-18 16:36:17,980 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Content-Type: text/xml; charset=utf-8[\r][\n]"
- 2016-05-18 16:36:17,980 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "Content-Length: 14359[\r][\n]"
- 2016-05-18 16:36:17,980 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "[\r][\n]"
- 2016-05-18 16:36:17,980 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "<?xml version="1.0" encoding="utf-8"?>[\r][\n]"
- 2016-05-18 16:36:17,981 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://WebXml.com.cn/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://WebXml.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">[\r][\n]"
- 2016-05-18 16:36:17,982 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; &lt;strong&gt;[0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xef][0xbc][0x88][0xe6][0x94][0xaf][0xe6][0x8c][0x81][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x92][0x8c][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe5][0xb8][0x82][0xe7][0x9a][0x84][0xe5][0x85][0xa8][0xe9][0x83][0xa8][0xe5][0x9f][0xba][0xe9][0x87][0x91][0xe3][0x80][0x81][0xe5][0x80][0xba][0xe5][0x88][0xb8][0xe5][0x92][0x8c][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xef][0xbc][0x89]&lt;/strong&gt;[0xef][0xbc][0x8c][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xe5][0x8d][0xb3][0xe6][0x97][0xb6][0xe6][0x9b][0xb4][0xe6][0x96][0xb0][0xe3][0x80][0x82][0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe4][0xbb][0x85][0xe4][0xbd][0x9c][0xe4][0xb8][0xba][0xe7][0x94][0xa8][0xe6][0x88][0xb7][0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe4][0xb9][0x8b][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe5][0xb9][0xb6][0xe4][0xb8][0x8d][0xe6][0x9e][0x84][0xe6][0x88][0x90][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe5][0xbb][0xba][0xe8][0xae][0xae][0xe3][0x80][0x82]&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; [0xe5][0x92][0x8c]/[0xe6][0x88][0x96][0xe5][0x85][0xb6][0xe5][0x90][0x84][0xe4][0xbe][0x9b][0xe5][0xba][0x94][0xe5][0x95][0x86][0xe4][0xb8][0x8d][0xe4][0xb8][0xba][0xe6][0x9c][0xac][0xe9][0xa1][0xb5][0xe9][0x9d][0xa2][0xe6][0x8f][0x90][0xe4][0xbe][0x9b][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe7][0x9a][0x84][0xe9][0x94][0x99][0xe8][0xaf][0xaf][0xe3][0x80][0x81][0xe6][0xae][0x8b][0xe7][0xbc][0xba][0xe3][0x80][0x81][0xe5][0xbb][0xb6][0xe8][0xbf][0x9f][0xe6][0x88][0x96][0xe5][0x9b][0xa0][0xe4][0xbe][0x9d][0xe9][0x9d][0xa0][0xe6][0xad][0xa4][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe6][0x89][0x80][0xe9][0x87][0x87][0xe5][0x8f][0x96][0xe7][0x9a][0x84][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe8][0xa1][0x8c][0xe5][0x8a][0xa8][0xe8][0xb4][0x9f][0xe8][0xb4][0xa3][0xe3][0x80][0x82]&lt;strong&gt;[0xe5][0xb8][0x82][0xe5][0x9c][0xba][0xe6][0x9c][0x89][0xe9][0xa3][0x8e][0xe9][0x99][0xa9][0xef][0xbc][0x8c][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe9][0x9c][0x80][0xe8][0xb0][0xa8][0xe6][0x85][0x8e]&lt;/strong&gt;[0xe3][0x80][0x82]&lt;br /&gt;[0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe6][0x95][0xb0][0xe6][0x8d][0xae]Web Services[0xe8][0xaf][0xb7][0xe4][0xb8][0x8d][0xe8][0xa6][0x81][0xe7][0x94][0xa8][0xe4][0xba][0x8e][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe5][0x95][0x86][0xe4][0xb8][0x9a][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe8][0x8b][0xa5][0xe6][0x9c][0x89][0xe9][0x9c][0x80][0xe8][0xa6][0x81][0xe8][0xaf][0xb7]&lt;a href="http://www.webxml.com.cn/zh_cn/contact_us.aspx" target="_blank"&gt;[0xe8][0x81][0x94][0xe7][0xb3][0xbb][0xe6][0x88][0x91][0xe4][0xbb][0xac]&lt;/a&gt;[0xef][0xbc][0x8c][0xe6][0xac][0xa2][0xe8][0xbf][0x8e][0xe6][0x8a][0x80][0xe6][0x9c][0xaf][0xe4][0xba][0xa4][0xe6][0xb5][0x81][0xe3][0x80][0x82] QQ[0xef][0xbc][0x9a]8409035&lt;br /&gt;&lt;strong&gt;[0xe4][0xbd][0xbf][0xe7][0x94][0xa8][0xe6][0x9c][0xac][0xe7][0xab][0x99] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe8][0xaf][0xb7][0xe6][0xb3][0xa8][0xe6][0x98][0x8e][0xe6][0x88][0x96][0xe9][0x93][0xbe][0xe6][0x8e][0xa5][0xe6][0x9c][0xac][0xe7][0xab][0x99][0xef][0xbc][0x9a]http://www.webxml.com.cn/ [0xe6][0x84][0x9f][0xe8][0xb0][0xa2][0xe5][0xa4][0xa7][0xe5][0xae][0xb6][0xe7][0x9a][0x84][0xe6][0x94][0xaf][0xe6][0x8c][0x81]&lt;/strong&gt;[0xef][0xbc][0x81]&lt;br /&gt;&lt;br /&gt;&lt;span style="color:#D20000;"&gt;&lt;strong&gt;[0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe6][0xb3][0xa8][0xe6][0x84][0x8f][0xe4][0xba][0x8b][0xe9][0xa1][0xb9]&lt;/strong&gt;[0xef][0xbc][0x9a][0xe5][0x9b][0xa0][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x92][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe4][0xb8][0x8a][0xe6][0x9c][0x89][0xe9][0x87][0x8d][0xe5][0x8f][0xa0][0xef][0xbc][0x8c][0xe6][0x89][0x80][0xe4][0xbb][0xa5][0xe5][0x9c][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xaf][0xb7][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe5][0x89][0x8d][0xe5][0x8a][0xa0] SH[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x8a][0xa0] SZ[0xef][0xbc][0x88][0xe4][0xb8][0x8d][0xe5][0x8c][0xba][0xe5][0x88][0x86][0xe5][0xa4][0xa7][0xe5][0xb0][0x8f][0xe5][0x86][0x99][0xef][0xbc][0x89][0xef][0xbc][0x8c][0xe4][0xbe][0x8b][0xef][0xbc][0x9a][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x8f][0x91][0xe5][0xb1][0x95]A sz000001[0xe3][0x80][0x82][0xe5][0xa6][0x82][0xe4][0xb8][0x8d][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe9][0xbb][0x98][0xe8][0xae][0xa4][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:17,985 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:types>[\r][\n]"
- 2016-05-18 16:36:17,986 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <s:schema elementFormDefault="qualified" targetNamespace="http://WebXml.com.cn/">[\r][\n]"
- 2016-05-18 16:36:17,986 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:17,986 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType>[\r][\n]"
- 2016-05-18 16:36:17,987 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          <s:sequence>[\r][\n]"
- 2016-05-18 16:36:17,987 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="0" maxOccurs="1" name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:17,987 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="1" maxOccurs="1" name="theImageType" type="s:unsignedByte" />[\r][\n]"
- 2016-05-18 16:36:17,987 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          </s:sequence>[\r][\n]"
- 2016-05-18 16:36:17,988 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        </s:complexType>[\r][\n]"
- 2016-05-18 16:36:17,988 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:36:17,988 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImageResponse">[\r][\n]"
- 2016-05-18 16:36:17,988 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType />[\r][\n]"
- 2016-05-18 16:36:17,989 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:36:17,989 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:17,989 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType>[\r][\n]"
- 2016-05-18 16:36:17,990 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          <s:sequence>[\r][\n]"
- 2016-05-18 16:36:17,990 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="0" maxOccurs="1" name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:17,990 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="1" maxOccurs="1" name="theImageType" type="s:unsignedByte" />[\r][\n]"
- 2016-05-18 16:36:17,990 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          </s:sequence>[\r][\n]"
- 2016-05-18 16:36:17,991 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        </s:complexType>[\r][\n]"
- 2016-05-18 16:36:17,991 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:36:17,991 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="getSmallImageByteResponse">[\r][\n]"
- 2016-05-18 16:36:17,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <s:complexType>[\r][\n]"
- 2016-05-18 16:36:17,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          <s:sequence>[\r][\n]"
- 2016-05-18 16:36:17,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "            <s:element minOccurs="0" maxOccurs="1" name="getSmallImageByteResult" type="s:base64Binary" />[\r][\n]"
- 2016-05-18 16:36:17,992 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "          </s:sequence>[\r][\n]"
- 2016-05-18 16:36:17,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        </s:complexType>[\r][\n]"
- 2016-05-18 16:36:17,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </s:element>[\r][\n]"
- 2016-05-18 16:36:17,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />[\r][\n]"
- 2016-05-18 16:36:17,993 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </s:schema>[\r][\n]"
- 2016-05-18 16:36:17,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:types>[\r][\n]"
- 2016-05-18 16:36:17,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageSoapIn">[\r][\n]"
- 2016-05-18 16:36:17,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImage" />[\r][\n]"
- 2016-05-18 16:36:17,994 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:17,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageSoapOut">[\r][\n]"
- 2016-05-18 16:36:17,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImageResponse" />[\r][\n]"
- 2016-05-18 16:36:17,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:17,995 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteSoapIn">[\r][\n]"
- 2016-05-18 16:36:17,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImageByte" />[\r][\n]"
- 2016-05-18 16:36:17,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:17,996 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteSoapOut">[\r][\n]"
- 2016-05-18 16:36:17,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="parameters" element="tns:getSmallImageByteResponse" />[\r][\n]"
- 2016-05-18 16:36:17,997 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:17,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpGetIn">[\r][\n]"
- 2016-05-18 16:36:17,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:17,998 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:17,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:17,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpGetOut" />[\r][\n]"
- 2016-05-18 16:36:17,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpGetIn">[\r][\n]"
- 2016-05-18 16:36:17,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:17,999 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:18,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:18,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpGetOut">[\r][\n]"
- 2016-05-18 16:36:18,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="Body" element="tns:base64Binary" />[\r][\n]"
- 2016-05-18 16:36:18,000 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:18,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpPostIn">[\r][\n]"
- 2016-05-18 16:36:18,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:18,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:18,001 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:18,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageHttpPostOut" />[\r][\n]"
- 2016-05-18 16:36:18,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpPostIn">[\r][\n]"
- 2016-05-18 16:36:18,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theStockCode" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:18,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="theImageType" type="s:string" />[\r][\n]"
- 2016-05-18 16:36:18,002 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:18,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:message name="getSmallImageByteHttpPostOut">[\r][\n]"
- 2016-05-18 16:36:18,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:part name="Body" element="tns:base64Binary" />[\r][\n]"
- 2016-05-18 16:36:18,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:message>[\r][\n]"
- 2016-05-18 16:36:18,003 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:portType name="ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:36:18,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe]&lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,004 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageSoapIn" />[\r][\n]"
- 2016-05-18 16:36:18,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageSoapOut" />[\r][\n]"
- 2016-05-18 16:36:18,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,005 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84] &lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89][0xef][0xbc][0x9b] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageByteSoapIn" />[\r][\n]"
- 2016-05-18 16:36:18,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageByteSoapOut" />[\r][\n]"
- 2016-05-18 16:36:18,006 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:portType>[\r][\n]"
- 2016-05-18 16:36:18,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:portType name="ChinaStockSmallImageWSHttpGet">[\r][\n]"
- 2016-05-18 16:36:18,007 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe]&lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageHttpGetIn" />[\r][\n]"
- 2016-05-18 16:36:18,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageHttpGetOut" />[\r][\n]"
- 2016-05-18 16:36:18,008 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84] &lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89][0xef][0xbc][0x9b] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageByteHttpGetIn" />[\r][\n]"
- 2016-05-18 16:36:18,009 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageByteHttpGetOut" />[\r][\n]"
- 2016-05-18 16:36:18,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:portType>[\r][\n]"
- 2016-05-18 16:36:18,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:portType name="ChinaStockSmallImageWSHttpPost">[\r][\n]"
- 2016-05-18 16:36:18,010 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,011 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe]&lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theIma"
- 2016-05-18 16:36:18,014 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << HTTP/1.1 200 OK
- 2016-05-18 16:36:18,015 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Date: Wed, 18 May 2016 08:36:49 GMT
- 2016-05-18 16:36:18,015 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Server: Microsoft-IIS/6.0
- 2016-05-18 16:36:18,015 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << X-Powered-By: ASP.NET
- 2016-05-18 16:36:18,015 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << X-AspNet-Version: 2.0.50727
- 2016-05-18 16:36:18,016 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Cache-Control: private, max-age=0
- 2016-05-18 16:36:18,016 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Content-Type: text/xml; charset=utf-8
- 2016-05-18 16:36:18,016 [main] [org.apache.http.headers] [DEBUG] - http-outgoing-0 << Content-Length: 14359
- 2016-05-18 16:36:18,022 [main] [org.apache.http.impl.execchain.MainClientExec] [DEBUG] - Connection can be kept alive indefinitely
- 2016-05-18 16:36:18,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "geType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageHttpPostIn" />[\r][\n]"
- 2016-05-18 16:36:18,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageHttpPostOut" />[\r][\n]"
- 2016-05-18 16:36:18,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,027 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;br /&gt;&lt;h3&gt;[0xe7][0x9b][0xb4][0xe6][0x8e][0xa5][0xe8][0x8e][0xb7][0xe5][0xbe][0x97][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84] &lt;/h3&gt;&lt;p&gt;[0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe5][0x8f][0x82][0xe6][0x95][0xb0][0xef][0xbc][0x9a]theStockCode [0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7] String[0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xef][0xbc][0x9a]sh000001[0xef][0xbc][0x8c]theImageType [0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe5][0x9b][0xbe][0xe7][0xb1][0xbb][0xe5][0x9e][0x8b] Byte[0xef][0xbc][0x88][0xe5][0xbf][0x85][0xe9][0xa1][0xbb][0xef][0xbc][0x89][0xef][0xbc][0x9a]theImageType = 1[0xef][0xbc][0x88][0xe5][0xb0][0x8f][0xe5][0x9b][0xbe][0xef][0xbc][0x89][0xef][0xbc][0x9b] [0xe8][0xbf][0x94][0xe5][0x9b][0x9e][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xef][0xbc][0x9a][0xe8][0x82][0xa1][0xe7][0xa5][0xa8]GIF[0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe][0xe5][0xad][0x97][0xe8][0x8a][0x82][0xe6][0x95][0xb0][0xe7][0xbb][0x84][0xe3][0x80][0x82]&lt;/p&gt;&lt;br /&gt;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input message="tns:getSmallImageByteHttpPostIn" />[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output message="tns:getSmallImageByteHttpPostOut" />[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:portType>[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSSoap" type="tns:ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap:operation soapAction="http://WebXml.com.cn/getSmallImage" style="document" />[\r][\n]"
- 2016-05-18 16:36:18,028 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap:operation soapAction="http://WebXml.com.cn/getSmallImageByte" style="document" />[\r][\n]"
- 2016-05-18 16:36:18,029 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSSoap12" type="tns:ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:36:18,030 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap12:operation soapAction="http://WebXml.com.cn/getSmallImage" style="document" />[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,031 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap12:operation soapAction="http://WebXml.com.cn/getSmallImageByte" style="document" />[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <soap12:body use="literal" />[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,032 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSHttpGet" type="tns:ChinaStockSmallImageWSHttpGet">[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <http:binding verb="GET" />[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImage" />[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <http:urlEncoded />[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output />[\r][\n]"
- 2016-05-18 16:36:18,033 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImageByte" />[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <http:urlEncoded />[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:mimeXml part="Body" />[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,034 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:binding name="ChinaStockSmallImageWSHttpPost" type="tns:ChinaStockSmallImageWSHttpPost">[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <http:binding verb="POST" />[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImage">[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImage" />[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:content type="application/x-www-form-urlencoded" />[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,035 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output />[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:operation name="getSmallImageByte">[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:operation location="/getSmallImageByte" />[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:content type="application/x-www-form-urlencoded" />[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:input>[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "        <mime:mimeXml part="Body" />[\r][\n]"
- 2016-05-18 16:36:18,036 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      </wsdl:output>[\r][\n]"
- 2016-05-18 16:36:18,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:operation>[\r][\n]"
- 2016-05-18 16:36:18,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:binding>[\r][\n]"
- 2016-05-18 16:36:18,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  <wsdl:service name="ChinaStockSmallImageWS">[\r][\n]"
- 2016-05-18 16:36:18,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; &lt;strong&gt;[0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe5][0x88][0x86][0xe6][0x97][0xb6][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xef][0xbc][0x88][0xe6][0x94][0xaf][0xe6][0x8c][0x81][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x92][0x8c][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe5][0xb8][0x82][0xe7][0x9a][0x84][0xe5][0x85][0xa8][0xe9][0x83][0xa8][0xe5][0x9f][0xba][0xe9][0x87][0x91][0xe3][0x80][0x81][0xe5][0x80][0xba][0xe5][0x88][0xb8][0xe5][0x92][0x8c][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xef][0xbc][0x89]&lt;/strong&gt;[0xef][0xbc][0x8c][0xe6][0x95][0xb0][0xe6][0x8d][0xae][0xe5][0x8d][0xb3][0xe6][0x97][0xb6][0xe6][0x9b][0xb4][0xe6][0x96][0xb0][0xe3][0x80][0x82][0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xb5][0xb0][0xe5][0x8a][0xbf][0xe9][0xa2][0x84][0xe8][0xa7][0x88][0xe7][0xbc][0xa9][0xe7][0x95][0xa5][0xe5][0x9b][0xbe] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe4][0xbb][0x85][0xe4][0xbd][0x9c][0xe4][0xb8][0xba][0xe7][0x94][0xa8][0xe6][0x88][0xb7][0xe8][0x8e][0xb7][0xe5][0x8f][0x96][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe4][0xb9][0x8b][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe5][0xb9][0xb6][0xe4][0xb8][0x8d][0xe6][0x9e][0x84][0xe6][0x88][0x90][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe5][0xbb][0xba][0xe8][0xae][0xae][0xe3][0x80][0x82]&lt;a href="http://www.webxml.com.cn/" target="_blank"&gt;WebXml.com.cn&lt;/a&gt; [0xe5][0x92][0x8c]/[0xe6][0x88][0x96][0xe5][0x85][0xb6][0xe5][0x90][0x84][0xe4][0xbe][0x9b][0xe5][0xba][0x94][0xe5][0x95][0x86][0xe4][0xb8][0x8d][0xe4][0xb8][0xba][0xe6][0x9c][0xac][0xe9][0xa1][0xb5][0xe9][0x9d][0xa2][0xe6][0x8f][0x90][0xe4][0xbe][0x9b][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe7][0x9a][0x84][0xe9][0x94][0x99][0xe8][0xaf][0xaf][0xe3][0x80][0x81][0xe6][0xae][0x8b][0xe7][0xbc][0xba][0xe3][0x80][0x81][0xe5][0xbb][0xb6][0xe8][0xbf][0x9f][0xe6][0x88][0x96][0xe5][0x9b][0xa0][0xe4][0xbe][0x9d][0xe9][0x9d][0xa0][0xe6][0xad][0xa4][0xe4][0xbf][0xa1][0xe6][0x81][0xaf][0xe6][0x89][0x80][0xe9][0x87][0x87][0xe5][0x8f][0x96][0xe7][0x9a][0x84][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe8][0xa1][0x8c][0xe5][0x8a][0xa8][0xe8][0xb4][0x9f][0xe8][0xb4][0xa3][0xe3][0x80][0x82]&lt;strong&gt;[0xe5][0xb8][0x82][0xe5][0x9c][0xba][0xe6][0x9c][0x89][0xe9][0xa3][0x8e][0xe9][0x99][0xa9][0xef][0xbc][0x8c][0xe6][0x8a][0x95][0xe8][0xb5][0x84][0xe9][0x9c][0x80][0xe8][0xb0][0xa8][0xe6][0x85][0x8e]&lt;/strong&gt;[0xe3][0x80][0x82]&lt;br /&gt;[0xe6][0xad][0xa4][0xe4][0xb8][0xad][0xe5][0x9b][0xbd][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xa1][0x8c][0xe6][0x83][0x85][0xe6][0x95][0xb0][0xe6][0x8d][0xae]Web Services[0xe8][0xaf][0xb7][0xe4][0xb8][0x8d][0xe8][0xa6][0x81][0xe7][0x94][0xa8][0xe4][0xba][0x8e][0xe4][0xbb][0xbb][0xe4][0xbd][0x95][0xe5][0x95][0x86][0xe4][0xb8][0x9a][0xe7][0x9b][0xae][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe8][0x8b][0xa5][0xe6][0x9c][0x89][0xe9][0x9c][0x80][0xe8][0xa6][0x81][0xe8][0xaf][0xb7]&lt;a href="http://www.webxml.com.cn/zh_cn/contact_us.aspx" target="_blank"&gt;[0xe8][0x81][0x94][0xe7][0xb3][0xbb][0xe6][0x88][0x91][0xe4][0xbb][0xac]&lt;/a&gt;[0xef][0xbc][0x8c][0xe6][0xac][0xa2][0xe8][0xbf][0x8e][0xe6][0x8a][0x80][0xe6][0x9c][0xaf][0xe4][0xba][0xa4][0xe6][0xb5][0x81][0xe3][0x80][0x82] QQ[0xef][0xbc][0x9a]8409035&lt;br /&gt;&lt;strong&gt;[0xe4][0xbd][0xbf][0xe7][0x94][0xa8][0xe6][0x9c][0xac][0xe7][0xab][0x99] WEB [0xe6][0x9c][0x8d][0xe5][0x8a][0xa1][0xe8][0xaf][0xb7][0xe6][0xb3][0xa8][0xe6][0x98][0x8e][0xe6][0x88][0x96][0xe9][0x93][0xbe][0xe6][0x8e][0xa5][0xe6][0x9c][0xac][0xe7][0xab][0x99][0xef][0xbc][0x9a]http://www.webxml.com.cn/ [0xe6][0x84][0x9f][0xe8][0xb0][0xa2][0xe5][0xa4][0xa7][0xe5][0xae][0xb6][0xe7][0x9a][0x84][0xe6][0x94][0xaf][0xe6][0x8c][0x81]&lt;/strong&gt;[0xef][0xbc][0x81]&lt;br /&gt;&lt;br /&gt;&lt;span style="color:#D20000;"&gt;&lt;strong&gt;[0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe6][0xb3][0xa8][0xe6][0x84][0x8f][0xe4][0xba][0x8b][0xe9][0xa1][0xb9]&lt;/strong&gt;[0xef][0xbc][0x9a][0xe5][0x9b][0xa0][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x92][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe4][0xb8][0x8a][0xe6][0x9c][0x89][0xe9][0x87][0x8d][0xe5][0x8f][0xa0][0xef][0xbc][0x8c][0xe6][0x89][0x80][0xe4][0xbb][0xa5][0xe5][0x9c][0xa8][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe4][0xb8][0x8a][0xe6][0xb5][0xb7][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe8][0xaf][0xb7][0xe5][0x9c][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe5][0x89][0x8d][0xe5][0x8a][0xa0] SH[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x9c][0xb3][0xe5][0x8a][0xa0] SZ[0xef][0xbc][0x88][0xe4][0xb8][0x8d][0xe5][0x8c][0xba][0xe5][0x88][0x86][0xe5][0xa4][0xa7][0xe5][0xb0][0x8f][0xe5][0x86][0x99][0xef][0xbc][0x89][0xef][0xbc][0x8c][0xe4][0xbe][0x8b][0xef][0xbc][0x9a][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001[0xef][0xbc][0x8c][0xe6][0xb7][0xb1][0xe5][0x8f][0x91][0xe5][0xb1][0x95]A sz000001[0xe3][0x80][0x82][0xe5][0xa6][0x82][0xe4][0xb8][0x8d][0xe8][0xbe][0x93][0xe5][0x85][0xa5][0xe8][0x82][0xa1][0xe7][0xa5][0xa8][0xe4][0xbb][0xa3][0xe5][0x8f][0xb7][0xe9][0xbb][0x98][0xe8][0xae][0xa4][0xe4][0xb8][0x8a][0xe8][0xaf][0x81][0xe6][0x8c][0x87][0xe6][0x95][0xb0] sh000001&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&amp;nbsp;</wsdl:documentation>[\r][\n]"
- 2016-05-18 16:36:18,037 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSSoap" binding="tns:ChinaStockSmallImageWSSoap">[\r][\n]"
- 2016-05-18 16:36:18,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:36:18,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:36:18,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSSoap12" binding="tns:ChinaStockSmallImageWSSoap12">[\r][\n]"
- 2016-05-18 16:36:18,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <soap12:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:36:18,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:36:18,038 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSHttpGet" binding="tns:ChinaStockSmallImageWSHttpGet">[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    <wsdl:port name="ChinaStockSmallImageWSHttpPost" binding="tns:ChinaStockSmallImageWSHttpPost">[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "      <http:address location="http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx" />[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "    </wsdl:port>[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "  </wsdl:service>[\r][\n]"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.wire] [DEBUG] - http-outgoing-0 << "</wsdl:definitions>"
- 2016-05-18 16:36:18,039 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection [id: 0][route: {}->http://www.webxml.com.cn:80] can be kept alive indefinitely
- 2016-05-18 16:36:18,040 [main] [org.apache.http.impl.conn.PoolingHttpClientConnectionManager] [DEBUG] - Connection released: [id: 0][route: {}->http://www.webxml.com.cn:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
- 2016-05-18 16:40:36,703 [main] [com.kingbase.wsdl.download.URLConnectionUtil] [ERROR] - java.net.ProtocolException: cannot write to a URLConnection if doOutput=false - call setDoOutput(true)
- 
+2016-05-19 10:37:42,165 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:388)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:390)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 10:40:23,198 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:388)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:390)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 10:46:52,518 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:388)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:390)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 10:49:28,436 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:389)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:391)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 10:54:42,836 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:395)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:399)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 10:55:07,427 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:395)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:399)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 10:58:31,654 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:396)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:399)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 11:05:35,250 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.NullPointerException
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:396)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:300)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 11:06:06,724 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:395)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:409)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 11:06:38,087 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:401)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:404)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 11:08:25,351 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:401)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:404)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 11:08:59,753 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:403)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:406)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
+2016-05-19 11:15:24,776 [main] [com.kingbase.wsdl.parser.WSDLParser] [ERROR] - 解析wsdl异常
+ java.lang.IllegalStateException: Unable to find element referenced :" schema"
+	at org.exolab.castor.xml.schema.ElementDecl.getReference(Unknown Source)
+	at org.exolab.castor.xml.schema.ElementDecl.getType(Unknown Source)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:404)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildComplexParameter(ComponentBuilder.java:407)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.getParameterFromMessage(ComponentBuilder.java:341)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperation(ComponentBuilder.java:315)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildOperations(ComponentBuilder.java:237)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.populateComponent(ComponentBuilder.java:179)
+	at com.kingbase.wsdl.parser.util.ComponentBuilder.buildserviceinformation(ComponentBuilder.java:89)
+	at com.kingbase.wsdl.parser.WSDLParser.parse(WSDLParser.java:28)
+	at com.kingbase.wsdl.parser.WSDLParser.main(WSDLParser.java:90)
