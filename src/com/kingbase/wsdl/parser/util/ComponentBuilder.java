@@ -79,6 +79,10 @@ public class ComponentBuilder {
 		//解析wsdl 生成Definition
 		Definition def=reader.readWSDL(null, serviceinfo.getWsdllocation());
 		
+		String targetNamespace = def.getTargetNamespace();
+		serviceinfo.setTargetnamespace(targetNamespace);
+		
+		def.getPortTypes();
 		//获取schema
 		wsdlTypes = createSchemaFromTypes(def,serviceinfo);//从Definition 中生成schema
 		
@@ -302,6 +306,7 @@ public class ComponentBuilder {
 				operationInfo.setInputMessageName(inMsg.getQName().getLocalPart());
                 //输入消息的参数构建
 				getParameterFromMessage(operationInfo, inMsg, 1);
+				//从 bing中获取参数
 				operationInfo.setInmessage(inMsg);
 			}
 		}
@@ -349,7 +354,13 @@ public class ComponentBuilder {
 				String partName = part.getName();
 				ParameterInfo parameter = new ParameterInfo();
 				parameter.setName(partName);
+				
+				QName typeName = part.getTypeName();
+				if(typeName==null){
+					continue;
+				}
 				parameter.setKind(part.getTypeName().getLocalPart());
+				
 				if (manner == 1) {
 					//1表示构建的是操作的输入参数
 					operationInfo.addInparameter(parameter);
@@ -438,6 +449,11 @@ public class ComponentBuilder {
 			ElementDecl elemDecl = null;
 			for (int i = 0; i < wsdlTypes.size(); i++) {
 				wsdlType = (Schema) (wsdlTypes.elementAt(i));
+				
+				if(wsdlType==null){
+					continue;
+				}
+				
 				String targetnamespace=wsdlType.getTargetNamespace();
 				operationInfo.setNamespaceURI(targetnamespace);
 				elemDecl=wsdlType.getElementDecl(elemName);

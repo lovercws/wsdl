@@ -40,10 +40,6 @@ public class ServiceInfo {
 		operations.add(operation);
 	}
 
-	public String toString() {
-		return getName();
-	}
-
 	public String getTargetnamespace() {
 		return targetnamespace;
 	}

@@ -29,7 +29,6 @@ public class HttpClientUtil {
 			CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
 			HttpGet http = new HttpGet(uri);
-
 			CloseableHttpResponse response = httpClient.execute(http);
 
 			responseBody = EntityUtils.toString(response.getEntity());

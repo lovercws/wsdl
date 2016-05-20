@@ -56,8 +56,7 @@ public class SOAPCaller {
 		//System.out.println(returnValue.getValue());
 		if (!resp.generatedFault()) {
 			Parameter ret = resp.getReturnValue();
-			Object value = ret.getValue();
-			System.out.println(value);
+			System.out.println(ret);
 		} else {
 			Fault fault = resp.getFault();
 			System.err.println("Generated fault: ");

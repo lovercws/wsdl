@@ -2,9 +2,15 @@ package com.kingbase.wsdl.parser.util;
 
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.io.StringReader;
 import java.io.Reader;
 
+import org.apache.axiom.om.OMAbstractFactory;
+import org.apache.axiom.om.OMElement;
+import org.apache.axiom.om.OMFactory;
+import org.apache.axiom.om.OMNamespace;
 import org.exolab.castor.xml.schema.*;
 import org.exolab.castor.xml.schema.reader.SchemaReader;
 import org.exolab.castor.xml.schema.writer.SchemaWriter;
@@ -85,5 +91,26 @@ public class XMLSupport {
 		SchemaWriter schemaWriter = new SchemaWriter(writer);
 		schemaWriter.write(schema);
 		return writer.toString();
+	}
+	
+	/**
+	 * 构建参数
+	 * @param nameSpace
+	 * @param methodName
+	 * @param parameterMap
+	 * @return
+	 */
+	public static OMElement createParameterElement(String nameSpace,String methodName, Map<String, Object> parameterMap) {
+		OMFactory fac = OMAbstractFactory.getOMFactory();
+		OMNamespace omNs = fac.createOMNamespace(nameSpace, "");
+		OMElement method = fac.createOMElement(methodName, omNs);
+        
+		for (Entry<String, Object> entry : parameterMap.entrySet()) {
+			OMElement param = fac.createOMElement(entry.getKey(), omNs);
+			param.addChild(fac.createOMText(param, String.valueOf(entry.getValue())));
+			method.addChild(param);
+		}
+		method.build();
+		return method;
 	}
 }

@@ -20,7 +20,7 @@ public class WSDLParser {
 	private static final Logger log=Logger.getLogger(WSDLParser.class);
 	
 	/**
-	 * 解析wsdl生成ServiceInfo
+	 * 解析SOAP wsdl生成ServiceInfo
 	 * @param url
 	 * @return
 	 */
@@ -47,6 +47,9 @@ public class WSDLParser {
 		return serviceInfo;
 	}
 	
+	/*public ServiceInfo parser(InputSource inputSource){
+		
+	}*/
 	/**
 	 * 返回方法的集合
 	 * @param serviceInfo
@@ -72,22 +75,19 @@ public class WSDLParser {
 			List<ParameterInfo> inps = oper.getInparameters();
 			List<ParameterInfo> outps = oper.getOutparameters();
 			if (inps.size() == 0) {
-				System.out.println("此操作所需的输入参数为:");
-				System.out.println("执行此操作不需要输入任何参数!");
 			} else {
-				System.out.println("此操作所需的输入参数为:");
+				System.out.println("输入参数:");
 				for (Iterator<ParameterInfo> iterator1 = inps.iterator(); iterator1.hasNext();) {
 					ParameterInfo element = (ParameterInfo) iterator1.next();
-					System.out.println("参数名为:" + element.getName()+ "参数类型为:" + element.getKind());
+					System.out.println("参数名为:" + element.getName()+ "    参数类型为:" + element.getKind());
 				}
 			}
 			if (outps.size() == 0) {
-				System.out.println("执行此操作不返回任何参数!");
 			} else {
-				System.out.println("此操作的输出参数为:");
+				System.out.println("输出参数:");
 				for (Iterator<ParameterInfo> iterator2 = outps.iterator(); iterator2.hasNext();) {
 					ParameterInfo element = (ParameterInfo) iterator2.next();
-					System.out.println("参数名:" + element.getName()+"  类型为:" + element.getKind());
+					System.out.println("类型为:" + element.getKind());
 				}
 			}
 			System.out.println("");
@@ -97,11 +97,13 @@ public class WSDLParser {
 	public static void main(String[] args){
 		//String wsdllocation = "http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl";
 		//String wsdllocation = "http://www.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl";
-		String wsdllocation = "http://www.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl";
+		//String wsdllocation = "http://www.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl";
+		//String wsdllocation = "http://192.168.2.74:18080/services/helloworld?wsdl";
+		String wsdllocation = "http://192.168.8.144:9999/services/helloWord?wsdl";
 		
 		WSDLParser parser=new WSDLParser();
 		ServiceInfo serviceInfo = parser.parse(wsdllocation);
 		parser.print(serviceInfo);
-		System.out.println(serviceInfo);
+		//System.out.println(serviceInfo);
 	}
 }

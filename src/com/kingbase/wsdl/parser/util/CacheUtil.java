@@ -1,5 +1,7 @@
 package com.kingbase.wsdl.parser.util;
 
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.kingbase.wsdl.parser.info.ServiceInfo;
@@ -37,5 +39,19 @@ public class CacheUtil {
 	 */
 	public static ServiceInfo get(String uri){
 		return serviceInfos.get(uri);
+	}
+	
+	public static ConcurrentHashMap<String, ServiceInfo> getAll(){
+		return serviceInfos;
+	}
+	
+	public static ServiceInfo getServiceInfo(String serverName){
+		for (Entry<String, ServiceInfo> entry : serviceInfos.entrySet()) {
+			ServiceInfo serviceInfo = entry.getValue();
+			if(serviceInfo.getName().equals(serverName)){
+				return serviceInfo;
+			}
+		}
+		return null;
 	}
 }
