@@ -16,7 +16,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.axiom.om.OMElement;
+import org.apache.log4j.Logger;
 
+import com.kingbase.wsdl.parser.caller.AxisCaller;
 import com.kingbase.wsdl.parser.info.OperationInfo;
 import com.kingbase.wsdl.parser.info.ParameterInfo;
 import com.kingbase.wsdl.parser.info.ServiceInfo;
@@ -27,6 +29,7 @@ import com.kingbase.wsdl.parser.util.XMLSupport;
 @WebServlet(urlPatterns={"/WsdlLoadServlet"})
 public class WsdlLoadServlet extends HttpServlet{
 
+	private static final Logger log=Logger.getLogger(WsdlLoadServlet.class);
 	private static final long serialVersionUID = -3198990186345076733L;
 
 	@Override
@@ -54,11 +57,19 @@ public class WsdlLoadServlet extends HttpServlet{
 		//获取参数
 		case "getParameterDATA":
 			json=getParameterDATA(request);
+			
+			json="{\"data\":\""+URLEncoder.encode(json, "UTF-8")+"\"}";
+			break;
+		//调用方法 返回结果
+		case "getResultDATA":
+			json=getResultDATA(request);
+			
 			json="{\"data\":\""+URLEncoder.encode(json, "UTF-8")+"\"}";
 			break;
 		default:
 			break;
 		}
+	    log.info(json);
 	    response.getWriter().print(json);
 	}
 
@@ -108,6 +119,22 @@ public class WsdlLoadServlet extends HttpServlet{
 		String methodName=request.getParameter("methodName");
 		
 		ServiceInfo serviceInfo = CacheUtil.getServiceInfo(serverName);
+		if(serviceInfo==null){
+		    return "";
+		}
+		Map<String, Object> parameterMap=getParameterMap(serviceInfo, methodName);
+		
+		OMElement omElement = XMLSupport.createParameterElement(serviceInfo.getTargetnamespace(), methodName, parameterMap);
+	    return omElement.toString();
+	}
+	
+	/**
+	 * 获取到参数map
+	 * @param serviceInfo
+	 * @param methodName
+	 * @return
+	 */
+	private Map<String, Object> getParameterMap(ServiceInfo serviceInfo,String methodName){
 		Map<String, Object> parameterMap=new HashMap<String, Object>();
 		List<OperationInfo> operations = serviceInfo.getOperation();
 		
@@ -121,8 +148,26 @@ public class WsdlLoadServlet extends HttpServlet{
 				break loop;
 			}
 		}
+		return parameterMap;
+	}
+	
+	/**
+	 * 获取方法调用的结果
+	 * @param request
+	 * @return
+	 */
+	private String getResultDATA(HttpServletRequest request) {
+		String serverName=request.getParameter("serverName");
+		String methodName=request.getParameter("methodName");
 		
-		OMElement omElement = XMLSupport.createParameterElement(serviceInfo.getTargetnamespace(), methodName, parameterMap);
-	    return omElement.toString();
+		ServiceInfo serviceInfo = CacheUtil.getServiceInfo(serverName);
+		if(serviceInfo==null){
+		    return "";
+		}
+		Map<String, Object> parameterMap=getParameterMap(serviceInfo, methodName);
+		//调用
+		AxisCaller caller=new AxisCaller();
+		String json = caller.caller(serviceInfo.getWsdllocation(), serviceInfo.getTargetnamespace(), methodName, parameterMap);
+		return json;
 	}
 }

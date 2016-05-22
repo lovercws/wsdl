@@ -26,7 +26,7 @@ body {
 	var methodName;//方法名称
 	$(document).ready(function() {
 		$('#win').window('close');
-		//$('#methodCallWindow').window('close');
+		$('#methodCallWindow').window('close');
 		//获取wsdl解析树
 		$('#wsdlTree').tree({
 			url : './WsdlLoadServlet?type=load',
@@ -51,8 +51,9 @@ body {
 				$('#methodCallWindow').window('open');
 			    //获取参数xml数据
 				$.getJSON('./WsdlLoadServlet?type=getParameterDATA&serverName='+serverName+'&methodName='+methodName, function(json) {
-				    console.log(json);
-					$("#parameterPanel").text(decodeURIComponent(json.data));
+				    json=decodeURIComponent(json.data);
+				    json=json.replace('+',' ');
+					$("#parameterPanel").text(json);
 				});
 			}
 		});
@@ -83,6 +84,15 @@ body {
 				}
 			});
 		}
+		//点击运行 
+		$("#runComand").bind("click",function(){
+			$.getJSON('./WsdlLoadServlet?type=getResultDATA&serverName='+serverName+'&methodName='+methodName, function(json) {
+			    json=decodeURIComponent(json.data);
+			    json=json.replace('+',' ');
+			    console.log(json);
+				$("#resultPanel").text(json);
+			});
+		});
 
 		//关闭soapWindow弹框
 		closeForm = function() {
@@ -105,14 +115,18 @@ body {
 		</div>
 		<div id="content" region="center" title="" style="padding: 0px;">
 			<div id="methodCallWindow" class="easyui-window" title="方法调用"
-				style="width: 60%; height: 800px">
-				<div class="easyui-layout" style="width: 100%; height: 764px">
-				    <div  region="north" style="text-align: left; padding: 5px;">
-						<a class="easyui-linkbutton">运行</a> 
+				style="width: 55%; height:620px">
+				<div class="easyui-layout" style="width: 100%; height: 540px">
+				    <div region="north" style="text-align: left;height: 30px">
+						<a id="runComand" class="easyui-linkbutton">运行</a> 
 					</div>
-					<div id="parameterPanel" class="easyui-panel" region="west" style="width: 50%;">
-					<div id="resultPanel" class="easyui-panel" region="center" style="width: 50%;"></div>
-				</div>
+					<div class="easyui-panel" region="center" style="width:60%;height: 100px">
+					    <textarea id="resultPanel" rows="25" cols="50"></textarea>
+					</div>
+					<div class="easyui-panel" region="west" style="width:40%;">
+					     <textarea id="parameterPanel" rows="25" cols="30"></textarea>
+				    </div>
+			    </div>
 			</div>
 		</div>
 	</div>
