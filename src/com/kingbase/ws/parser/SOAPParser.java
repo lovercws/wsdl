@@ -19,27 +19,29 @@ import com.kingbase.ws.bean.ParameterBean;
 import com.kingbase.ws.bean.ServiceBean;
 import com.kingbase.ws.utils.DocumentUtil;
 import com.kingbase.ws.utils.HttpClientUtil;
+import com.kingbase.ws.utils.ParameterUtil;
 
+/**
+ * 解析wsdl
+ * @author ganliang
+ */
 public class SOAPParser {
 
 	private static final Map<String,List<ParameterBean>> parameters=new HashMap<String,List<ParameterBean>>();
 	
 	/**
-	 * 解析wsdl
-	 * @throws WSDLException
-	 * @throws IOException 
-	 * @throws IllegalArgumentException 
-	 * @throws SecurityException 
+	 * 解析wsdl文件流
+	 * @param inputStream
+	 * @return
+	 * @throws WSDLException 
 	 */
-	public ServiceBean parse(String wsdllocation) throws WSDLException, SecurityException, IllegalArgumentException, IOException {
-		//获取流
-		InputStream inputStream = HttpClientUtil.send(wsdllocation);
+	public ServiceBean parse(InputStream inputStream) throws WSDLException{
 		//获取文档
 		Document document = DocumentUtil.getDocument(inputStream);
 		Element rootElement = document.getRootElement();
 		
 		ServiceBean serviceBean=new ServiceBean();
-		serviceBean.setEndpointURI(wsdllocation);//发布url
+		//serviceBean.setEndpointURI(wsdllocation);//发布url
 		
 		Attribute targetNamespaceAttribute = rootElement.attribute("targetNamespace");
 		serviceBean.setTargetNamespace(targetNamespaceAttribute.getValue());//命名空间
@@ -53,8 +55,19 @@ public class SOAPParser {
 		//获取服务
 		buildServices(rootElement,serviceBean);
 		serviceBean.setBindingBean(bindingBeans);
-		print(serviceBean);
-		return serviceBean;
+		return serviceBean;		
+	}
+	/**
+	 * 解析wsdl
+	 * @throws WSDLException 
+	 * @throws IOException 
+	 * @throws IllegalArgumentException 
+	 * @throws SecurityException 
+	 */
+	public ServiceBean parse(String wsdllocation) throws WSDLException, SecurityException, IllegalArgumentException, IOException {
+		//获取流
+		InputStream inputStream = HttpClientUtil.send(wsdllocation);
+		return parse(inputStream);
 	}
 
 	/**
@@ -81,6 +94,13 @@ public class SOAPParser {
 		for (Element element : elements) {
 			if(element.getName().contains("documentation")){
 				serviceBean.setDocumentation(element.getText());
+			}else{
+				List<Element> list = element.elements();
+				if(list.size()>0){
+					Element ele = list.get(0);
+					String location = ele.attributeValue("location");
+					serviceBean.setEndpointURI(location+"?wsdl");
+				}
 				break;
 			}
 		}
@@ -277,7 +297,7 @@ public class SOAPParser {
 	 * 打印
 	 * @param serviceBean
 	 */
-	public void print(ServiceBean serviceBean){
+	public static void print(ServiceBean serviceBean){
 		System.out.println("服务名称 "+serviceBean.getServiceName());
 		List<BindingBean> bindingBean = serviceBean.getBindingBean();
 		for (BindingBean binding : bindingBean) {
@@ -289,6 +309,7 @@ public class SOAPParser {
 			System.out.println();
 			System.out.println();
 		}
+		System.out.println("url  "+serviceBean.getEndpointURI());
 	}
 	
 	public static void main(String[] args)
@@ -297,7 +318,17 @@ public class SOAPParser {
 		//String wsdllocation = "http://192.168.8.144:9999/services/helloWord?wsdl";
 		SOAPParser parser = new SOAPParser();
 
-		parser.parse(wsdllocation);
+		ServiceBean serviceBean = parser.parse(wsdllocation);
+		print(serviceBean);
+		
+		List<ServiceBean> serviceBeans=new ArrayList<ServiceBean>();
+		serviceBeans.add(serviceBean);
+		
+		String services = ParameterUtil.printServices(serviceBeans);
+		System.out.println(services);
+		
+		String service = ParameterUtil.printService(serviceBean);
+		System.out.println(service);
 
 	}
 }

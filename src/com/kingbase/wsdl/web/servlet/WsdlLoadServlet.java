@@ -33,7 +33,7 @@ import com.kingbase.wsdl.parser.parse.WSDLParser;
 import com.kingbase.wsdl.parser.util.CacheUtil;
 import com.kingbase.wsdl.parser.util.XMLSupport;
 
-@WebServlet(urlPatterns={"/WsdlLoadServlet"})
+@WebServlet(urlPatterns={"/WsdlLoadServlet2"})
 public class WsdlLoadServlet extends HttpServlet{
 
 	private static final Logger log=Logger.getLogger(WsdlLoadServlet.class);

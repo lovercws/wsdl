@@ -60,5 +60,4 @@ public class ServiceBean {
 		this.bindingBean = bindingBean;
 	}
 
-	
 }
