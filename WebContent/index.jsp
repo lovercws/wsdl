@@ -43,21 +43,26 @@ body {
 					serverName = node.parentName;
 				}
 				//加载详细信息
-				$.getJSON('./WsdlLoadServlet?type=load', function(json) {
+				/* $.getJSON('./WsdlLoadServlet?type=load', function(json) {
 					//$("#content").html("<div style='float:left'><b>"+JSON.stringify(json)+"</b></div>");
-				});
+				}); */
 			},
 			onDblClick : function(node) {//双击方法节点   显示执行
 				$('#methodCallWindow').window('open');
 			    //获取参数xml数据
-				$.getJSON('./WsdlLoadServlet?type=getParameterDATA&serverName='+serverName+'&methodName='+methodName, function(json) {
-				    json=decodeURIComponent(json.data);
-				    json=json.replace('+',' ');
-					$("#parameterPanel").text(json);
-				});
+			    $.ajax({
+			    	type: "POST", 
+			    	url:'./WsdlLoadServlet?type=getParameterDATA&serverName='+serverName+'&methodName='+methodName,
+			    	dataType: "text",
+			    	success:function(data){
+						$("#parameterPanel").html(data);
+						$("#parameterPanel").val($("#parameterPanel").text());
+						$("#resultPanel").val("");
+			    	}
+			    });
 			}
 		});
-
+        
 		//点击soap按钮
 		$('#soapButton').bind('click', function() {
 			$('#win').window('open');
@@ -77,7 +82,6 @@ body {
 				success : function(data) {
 					data = eval("(" + data + ")");
 					closeForm();
-					$('#soapForm').form("reset");
 					$('#wsdlTree').tree({
 						data : data
 					});
@@ -86,16 +90,21 @@ body {
 		}
 		//点击运行 
 		$("#runComand").bind("click",function(){
-			$.getJSON('./WsdlLoadServlet?type=getResultDATA&serverName='+serverName+'&methodName='+methodName, function(json) {
-			    json=decodeURIComponent(json.data);
-			    json=json.replace('+',' ');
-			    console.log(json);
-				$("#resultPanel").text(json);
+			var value=$("#parameterPanel").val();
+			$.ajax({
+			    	type: "POST", 
+			    	url:'./WsdlLoadServlet?type=getResultDATA&serverName='+serverName+'&methodName='+methodName+'&parameterXML='+value,
+			    	dataType: "text",
+			    	success:function(data){
+						$("#resultPanel").html(data);
+						$("#resultPanel").val($("#resultPanel").text());
+			    	}
 			});
 		});
 
 		//关闭soapWindow弹框
 		closeForm = function() {
+			$('#soapForm').form("reset");
 			$('#win').window('close');
 		}
 	});
@@ -103,9 +112,8 @@ body {
 </head>
 <body>
 	<div style="padding: 5px 5px 5px 5px;">
-		<a id="soapButton" href="#" class="easyui-linkbutton"
-			data-options="iconCls:'icon-add'">SOAP</a> <a id="importButton"
-			href="#" class="easyui-linkbutton"
+		<a id="soapButton" class="easyui-linkbutton"
+			data-options="iconCls:'icon-add'">SOAP</a> <a id="importButton"class="easyui-linkbutton"
 			data-options="iconCls:'icon-remove'" style="margin-left: 10px">导入</a>
 	</div>
 
@@ -115,17 +123,17 @@ body {
 		</div>
 		<div id="content" region="center" title="" style="padding: 0px;">
 			<div id="methodCallWindow" class="easyui-window" title="方法调用"
-				style="width: 55%; height:620px">
-				<div class="easyui-layout" style="width: 100%; height: 540px">
+				style="width: 65%; height:596px">
+				<div class="easyui-layout" style="width: 100%; height: 560px;padding:0px;margin:0px">
 				    <div region="north" style="text-align: left;height: 30px">
 						<a id="runComand" class="easyui-linkbutton">运行</a> 
 					</div>
-					<div class="easyui-panel" region="center" style="width:60%;height: 100px">
-					    <textarea id="resultPanel" rows="25" cols="50"></textarea>
-					</div>
-					<div class="easyui-panel" region="west" style="width:40%;">
-					     <textarea id="parameterPanel" rows="25" cols="30"></textarea>
+					<div class="easyui-panel" region="center" style="width:42%;">
+					 	<textarea id="parameterPanel" rows="25" cols="51"></textarea>
 				    </div>
+					<div class="easyui-panel" region="east" style="width:58%;height: 100px">
+					    <textarea id="resultPanel" rows="25" cols="73"></textarea>
+					</div>
 			    </div>
 			</div>
 		</div>

@@ -27,35 +27,32 @@ public class AxisCaller {
 	 * @param methodName 调用的方法名称
 	 * @param parameterMap 参数map
 	 * @return
+	 * @throws AxisFault 
 	 */
-	public String caller(String url,String nameSpace,String methodName, Map<String, Object> parameterMap) {
+	public String caller(String url,String nameSpace,String methodName, Map<String, Object> parameterMap) throws AxisFault {
 		OMElement result = null;
-		try {
-			Options options = new Options();
-			// 指定调用WebService的URL
-			options.setTo(new EndpointReference(url));
-			options.setAction(nameSpace+methodName);
+		Options options = new Options();
+		// 指定调用WebService的URL
+		options.setTo(new EndpointReference(url));
+		options.setAction(nameSpace+methodName);
 
-			ServiceClient serviceClient = new ServiceClient();
-			serviceClient.setOptions(options);
+		ServiceClient serviceClient = new ServiceClient();
+		serviceClient.setOptions(options);
 
-			OMElement parameterElement = XMLSupport.createParameterElement(nameSpace,methodName,parameterMap);
-            System.out.println(parameterElement.toString());
-			result = serviceClient.sendReceive(parameterElement);
-		} catch (AxisFault axisFault) {
-			log.error("axis2调用wsdl出现异常", axisFault);
-		}
-		log.debug("调用结果 "+result.toString());
+		OMElement parameterElement = XMLSupport.createParameterElement(nameSpace,methodName,parameterMap);
+        System.out.println(parameterElement.toString());
+		result = serviceClient.sendReceive(parameterElement);
+		log.debug("调用结果 "+result.toString());	
 		return result.toString();
 	}
 	
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws AxisFault {
 		AxisCaller caller=new AxisCaller();
 		Map<String, Object> parameterMap=new HashMap<String, Object>();
-		parameterMap.put("lgan", "ganliang");
-		parameterMap.put("lover", "cws");
+		parameterMap.put("lgan", "?");
+		parameterMap.put("lover", "?");
 		
 		//String caller2=caller.caller("http://www.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl", "http://WebXml.com.cn/", "getRegionDataset", parameterMap);
 		String caller2 = caller.caller("http://192.168.8.144:9999/services/helloWord?wsdl", "http://service.cytoscape.com/", "sayHi", parameterMap);

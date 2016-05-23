@@ -3,6 +3,8 @@ package com.kingbase.wsdl.download;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
+import javax.print.Doc;
+
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -11,6 +13,9 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
 
 /**
  * wsdl为网络上发布的服务 可以缓存wsdl
@@ -57,9 +62,12 @@ public class HttpClientUtil {
 		return resource;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws DocumentException {
 		HttpClientUtil clientUtil = new HttpClientUtil();
 		String sendRecord = clientUtil.sendRecord("http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl");
 		System.out.println(sendRecord);
+		
+		Document document = DocumentHelper.parseText(sendRecord);
+		System.out.println(document);
 	}
 }

@@ -16,7 +16,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.axiom.om.OMElement;
+import org.apache.axis2.AxisFault;
 import org.apache.log4j.Logger;
+import org.dom4j.Attribute;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.jdom.output.XMLOutputter;
 
 import com.kingbase.wsdl.parser.caller.AxisCaller;
 import com.kingbase.wsdl.parser.info.OperationInfo;
@@ -57,14 +64,12 @@ public class WsdlLoadServlet extends HttpServlet{
 		//获取参数
 		case "getParameterDATA":
 			json=getParameterDATA(request);
-			
-			json="{\"data\":\""+URLEncoder.encode(json, "UTF-8")+"\"}";
+			json=transformParameterXML(json);
 			break;
 		//调用方法 返回结果
 		case "getResultDATA":
 			json=getResultDATA(request);
-			
-			json="{\"data\":\""+URLEncoder.encode(json, "UTF-8")+"\"}";
+			json=transformResultXML(json);
 			break;
 		default:
 			break;
@@ -156,18 +161,97 @@ public class WsdlLoadServlet extends HttpServlet{
 	 * @param request
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	private String getResultDATA(HttpServletRequest request) {
 		String serverName=request.getParameter("serverName");
 		String methodName=request.getParameter("methodName");
-		
-		ServiceInfo serviceInfo = CacheUtil.getServiceInfo(serverName);
-		if(serviceInfo==null){
-		    return "";
+		String value=request.getParameter("parameterXML");
+		String json="";
+		try {
+			ServiceInfo serviceInfo = CacheUtil.getServiceInfo(serverName);
+			if(serviceInfo==null){
+			    return "";
+			}
+			Document document = DocumentHelper.parseText(value);
+			Element rootElement = document.getRootElement();
+			List<Element> elements = rootElement.elements();
+			
+			Map<String,Object> parameterMap=new HashMap<String,Object>();
+			for (Element element : elements) {
+				parameterMap.put(element.getName(), element.getTextTrim());
+			}
+			//调用
+			AxisCaller caller=new AxisCaller();
+			json = caller.caller(serviceInfo.getWsdllocation(), serviceInfo.getTargetnamespace(), methodName, parameterMap);
+		} catch (Exception e) {
+			json="";
+			e.printStackTrace();
 		}
-		Map<String, Object> parameterMap=getParameterMap(serviceInfo, methodName);
-		//调用
-		AxisCaller caller=new AxisCaller();
-		String json = caller.caller(serviceInfo.getWsdllocation(), serviceInfo.getTargetnamespace(), methodName, parameterMap);
 		return json;
+	}
+	
+	/**
+	 * 将xml字符串添加换行 空格等
+	 * @param json
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	private String transformParameterXML(String xml) {
+		StringBuilder builder=new StringBuilder();
+		try {
+			Document document = DocumentHelper.parseText(xml);
+			//添加根几点
+			Element rootElement = document.getRootElement();
+			String namespaceURI = rootElement.getNamespaceURI();
+			builder.append("<"+rootElement.getName()+"  xmlns=\""+namespaceURI+"\">\r\n");
+			//遍历子节点
+			List<Element> elements = rootElement.elements();
+			for (Element element : elements) {
+				String name = element.getName();
+				String text = element.getText();
+				builder.append("&nbsp&nbsp<"+name+">"+text+"</"+name+">\r\n");
+			}
+			
+			builder.append("</"+rootElement.getName()+">");
+		} catch (DocumentException e) {
+			e.printStackTrace();
+		}
+		//XMLSupport.outputString(doc);
+		return builder.toString();
+	}
+	
+	/**
+	 * 将xml字符串添加换行 空格等
+	 * @param json
+	 * @return
+	 */
+	@SuppressWarnings("unchecked")
+	private String transformResultXML(String xml) {
+		StringBuilder builder=new StringBuilder();
+		try {
+			Document document = DocumentHelper.parseText(xml);
+			//添加根几点
+			Element rootElement = document.getRootElement();
+			String namespaceURI = rootElement.getNamespaceURI();
+			builder.append("<"+rootElement.getName()+"  xmlns=\""+namespaceURI+"\">\r\n");
+			//遍历子节点
+			List<Element> elements = rootElement.elements();
+			for (Element element : elements) {
+				String name = element.getName();
+				builder.append("&nbsp&nbsp<"+name+">\r\n");
+				
+				List<Element> elements2 = element.elements();
+				for (Element ele : elements2) {
+					builder.append("&nbsp&nbsp&nbsp&nbsp<"+ele.getName()+">"+ele.getText()+"</"+ele.getName()+">\r\n");
+				}
+				
+				builder.append("&nbsp&nbsp</"+name+">\r\n");
+			}
+			
+			builder.append("</"+rootElement.getName()+">");
+		} catch (DocumentException e) {
+			e.printStackTrace();
+		}
+		return builder.toString();
 	}
 }
