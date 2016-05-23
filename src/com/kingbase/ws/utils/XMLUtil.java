@@ -75,8 +75,8 @@ public class XMLUtil {
 			String name = element.getName();
 			builder.append("&nbsp&nbsp<"+name+">\r\n");
 			
-			String text = element.getText();
-			if(text!=null){
+			String text = element.getTextTrim();
+			if(text!=null&&!"".equals(text)){
 				builder.append("&nbsp&nbsp"+text+"\r\n");
 			}else{
 				List<Element> elements2 = element.elements();
