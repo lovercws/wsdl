@@ -17,6 +17,8 @@ public class ServiceBean {
 	
 	private String serviceName;//服务名称
 	
+	private String wsdlType;//soap xsd
+	
 	//一个服务包含多个 port
 	private List<BindingBean> bindingBean=new ArrayList<BindingBean>();
 
@@ -60,4 +62,12 @@ public class ServiceBean {
 		this.bindingBean = bindingBean;
 	}
 
+	public String getWsdlType() {
+		return wsdlType;
+	}
+
+	public void setWsdlType(String wsdlType) {
+		this.wsdlType = wsdlType;
+	}
+	
 }

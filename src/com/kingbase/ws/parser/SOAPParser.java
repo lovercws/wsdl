@@ -29,6 +29,7 @@ public class SOAPParser {
 
 	private static final Map<String,List<ParameterBean>> parameters=new HashMap<String,List<ParameterBean>>();
 	
+	private String wsdlType="";
 	/**
 	 * 解析wsdl文件流
 	 * @param inputStream
@@ -54,7 +55,9 @@ public class SOAPParser {
 		
 		//获取服务
 		buildServices(rootElement,serviceBean);
+		
 		serviceBean.setBindingBean(bindingBeans);
+		serviceBean.setWsdlType(wsdlType);
 		return serviceBean;		
 	}
 	/**
@@ -125,12 +128,14 @@ public class SOAPParser {
 		//如果不存在导入scheme 则是soap格式的wsdl文件
 		if(importElements.size()==0){
 			buildParametersFromSOAP(schemaElement);
+			wsdlType="soap";
 		}
 		//如果存在 则types存在于import 文件
 		else{
 			Element element = importElements.get(0);
 			String schemaLocation = element.attribute("schemaLocation").getValue();
 			buildParametersFromXSD(schemaLocation);
+			wsdlType="xsd";
 		}
 	}
 	

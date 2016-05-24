@@ -5,6 +5,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
 import com.kingbase.ws.bean.BindingBean;
 import com.kingbase.ws.bean.OperationBean;
 import com.kingbase.ws.bean.ParameterBean;
@@ -126,4 +131,25 @@ public class ParameterUtil {
 	    return parameterMap;
 	}
 	
+	/**
+	 * 获取 输入参数
+	 * @param request 
+	 * @throws DocumentException 
+	 */
+	@SuppressWarnings("unchecked")
+	public static Map<String, Object> getInParameter(String parameterXML) throws DocumentException {
+		if(parameterXML==null||"".equals(parameterXML)){
+			throw new IllegalArgumentException();
+		}
+		
+		Document document = DocumentHelper.parseText(parameterXML);
+		Element rootElement = document.getRootElement();
+		List<Element> elements = rootElement.elements();
+		
+		Map<String,Object> parameterMap=new HashMap<String,Object>();
+		for (Element element : elements) {
+			parameterMap.put(element.getName(), element.getTextTrim());
+		}
+		return parameterMap;
+	}
 }

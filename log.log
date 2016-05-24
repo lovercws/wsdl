@@ -21,4 +21,81 @@
 	at com.kingbase.ws.parser.SOAPParser.parse(SOAPParser.java:70)
 	at com.kingbase.ws.parser.SOAPParser.main(SOAPParser.java:322)
 2016-05-23 20:16:40,097 [main] [com.kingbase.ws.utils.DocumentUtil] [ERROR] - 解析文档出现异常
- 
+ 2016-05-24 09:06:30,929 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+ 2016-05-24 09:06:30,934 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - Retrying request
+ 2016-05-24 09:06:31,944 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+ 2016-05-24 09:06:31,944 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - Retrying request
+ 2016-05-24 09:06:32,945 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+ 2016-05-24 09:06:32,945 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - Retrying request
+ 2016-05-24 09:06:33,947 [main] [org.apache.axis2.transport.http.impl.httpclient3.HTTPSenderImpl] [INFO] - Unable to sendViaPost to url[http://localhost:9080/WebService/TestService]
+ java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.httpclient.protocol.ReflectionSocketFactory.createSocket(ReflectionSocketFactory.java:140)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:125)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis2.transport.http.impl.httpclient3.HTTPSenderImpl.executeMethod(HTTPSenderImpl.java:900)
+	at org.apache.axis2.transport.http.impl.httpclient3.HTTPSenderImpl.sendViaPost(HTTPSenderImpl.java:212)
+	at org.apache.axis2.transport.http.HTTPSender.send(HTTPSender.java:121)
+	at org.apache.axis2.transport.http.CommonsHTTPTransportSender.writeMessageWithCommons(CommonsHTTPTransportSender.java:403)
+	at org.apache.axis2.transport.http.CommonsHTTPTransportSender.invoke(CommonsHTTPTransportSender.java:234)
+	at org.apache.axis2.engine.AxisEngine.send(AxisEngine.java:431)
+	at org.apache.axis2.description.OutInAxisOperationClient.send(OutInAxisOperation.java:399)
+	at org.apache.axis2.description.OutInAxisOperationClient.executeImpl(OutInAxisOperation.java:225)
+	at org.apache.axis2.client.OperationClient.execute(OperationClient.java:150)
+	at org.apache.axis2.client.ServiceClient.sendReceive(ServiceClient.java:533)
+	at org.apache.axis2.client.ServiceClient.sendReceive(ServiceClient.java:509)
+	at com.kingbase.ws.caller.XSDCaller.main(XSDCaller.java:40)
+2016-05-24 09:35:19,929 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+ 2016-05-24 09:35:19,934 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - Retrying request
+ 2016-05-24 09:35:20,936 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+ 2016-05-24 09:35:20,936 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - Retrying request
+ 2016-05-24 09:35:21,943 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - I/O exception (java.net.ConnectException) caught when processing request: Connection refused: connect
+ 2016-05-24 09:35:21,943 [main] [org.apache.commons.httpclient.HttpMethodDirector] [INFO] - Retrying request
+ 2016-05-24 09:35:22,955 [main] [org.apache.axis2.transport.http.impl.httpclient3.HTTPSenderImpl] [INFO] - Unable to sendViaPost to url[http://192.168.8.144:9999/services/helloWord?wsdl]
+ java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.commons.httpclient.protocol.ReflectionSocketFactory.createSocket(ReflectionSocketFactory.java:140)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:125)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.axis2.transport.http.impl.httpclient3.HTTPSenderImpl.executeMethod(HTTPSenderImpl.java:900)
+	at org.apache.axis2.transport.http.impl.httpclient3.HTTPSenderImpl.sendViaPost(HTTPSenderImpl.java:212)
+	at org.apache.axis2.transport.http.HTTPSender.send(HTTPSender.java:121)
+	at org.apache.axis2.transport.http.CommonsHTTPTransportSender.writeMessageWithCommons(CommonsHTTPTransportSender.java:403)
+	at org.apache.axis2.transport.http.CommonsHTTPTransportSender.invoke(CommonsHTTPTransportSender.java:234)
+	at org.apache.axis2.engine.AxisEngine.send(AxisEngine.java:431)
+	at org.apache.axis2.description.OutInAxisOperationClient.send(OutInAxisOperation.java:399)
+	at org.apache.axis2.description.OutInAxisOperationClient.executeImpl(OutInAxisOperation.java:225)
+	at org.apache.axis2.client.OperationClient.execute(OperationClient.java:150)
+	at org.apache.axis2.client.ServiceClient.sendReceive(ServiceClient.java:533)
+	at org.apache.axis2.client.ServiceClient.sendReceive(ServiceClient.java:509)
+	at com.kingbase.ws.caller.XSDCaller.main(XSDCaller.java:40)

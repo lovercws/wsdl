@@ -96,16 +96,55 @@ public class XMLUtil {
 	 * 构建参数
 	 * @param nameSpace
 	 * @param methodName
+	 * @param methodName2 
 	 * @param parameterMap
 	 * @return
 	 */
-	public static OMElement createParameterElement(String nameSpace,String methodName, Map<String, Object> parameterMap) {
+	public static OMElement createParameterElement(String nameSpace,String wsdlType, String methodName, Map<String, Object> parameterMap) {
+		if(wsdlType==null||"".equals(wsdlType)||"soap".equalsIgnoreCase(wsdlType)){
+			return createSOAPParameterElement(nameSpace, methodName, parameterMap);
+		}else{
+			return createXSDParameterElement(nameSpace, methodName, parameterMap);
+		}
+		
+	}
+	
+	/**
+	 * 创建soap格式的参数
+	 * @param nameSpace
+	 * @param methodName
+	 * @param parameterMap
+	 * @return
+	 */
+	public static OMElement createSOAPParameterElement(String nameSpace,String methodName, Map<String, Object> parameterMap){
 		OMFactory fac = OMAbstractFactory.getOMFactory();
 		OMNamespace omNs = fac.createOMNamespace(nameSpace, "");
 		OMElement method = fac.createOMElement(methodName, omNs);
         
 		for (Entry<String, Object> entry : parameterMap.entrySet()) {
 			OMElement param = fac.createOMElement(entry.getKey(), omNs);
+			param.addChild(fac.createOMText(param, String.valueOf(entry.getValue())));
+			method.addChild(param);
+		}
+		method.build();
+		return method;
+	}
+	
+	/**
+	 * 创建xsd格式的参数
+	 * @param nameSpace
+	 * @param methodName
+	 * @param parameterMap
+	 * @return
+	 */
+	private static OMElement createXSDParameterElement(String nameSpace, String methodName,
+			Map<String, Object> parameterMap) {
+		OMFactory fac = OMAbstractFactory.getOMFactory();
+		OMNamespace omNs = fac.createOMNamespace(nameSpace, "xsd");
+		OMElement method = fac.createOMElement(methodName, omNs);
+        
+		for (Entry<String, Object> entry : parameterMap.entrySet()) {
+			OMElement param = fac.createOMElement(entry.getKey(), null);
 			param.addChild(fac.createOMText(param, String.valueOf(entry.getValue())));
 			method.addChild(param);
 		}

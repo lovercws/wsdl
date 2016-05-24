@@ -14,11 +14,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.wsdl.WSDLException;
 
 import org.apache.axiom.om.OMElement;
+import org.apache.axis2.AxisFault;
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
+import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
@@ -51,22 +52,18 @@ public class WsdlLoadServlet extends HttpServlet{
 			break;
 		//提交一个 soap
 		case "soapSubmit":
+			String wsdlUri=request.getParameter("wsdlUri");
 			try {
-				String wsdlUri=request.getParameter("wsdlUri");
 				ServiceBean serviceBean = serviceBeans.get(wsdlUri);
 				if(serviceBean==null){
 					SOAPParser soapParser=new SOAPParser();
 					serviceBean = soapParser.parse(wsdlUri);
 					serviceBeans.put(wsdlUri, serviceBean);
 				}
-			} catch (SecurityException e) {
-				e.printStackTrace();
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-			} catch (WSDLException e) {
-				e.printStackTrace();
+				json=load();
+			}catch (Exception e) {
+				log.error("提交wsdl【"+wsdlUri+"】出现异常", e);
 			}
-			json=load();
 			break;
 		//获取参数
 		case "getParameterDATA":
@@ -75,13 +72,17 @@ public class WsdlLoadServlet extends HttpServlet{
 			break;
 		//调用方法 返回结果
 		case "getResultDATA":
-			json=getResultDATA(request);
-			json=XMLUtil.encodeResultXML(json);
+			try {
+				json=getResultDATA(request);
+				json=XMLUtil.encodeResultXML(json);
+			} catch (DocumentException e) {
+				log.error("调用异常", e);
+				json=e.getLocalizedMessage();
+			}
 			break;
 		default:
 			break;
 		}
-	    log.info(json);
 	    response.getWriter().print(json);
 	}
 
@@ -115,7 +116,7 @@ public class WsdlLoadServlet extends HttpServlet{
 		
 		Map<String, Object> parameterMap = ParameterUtil.getInParameter(serviceBean, methodName);
 		
-		OMElement omElement = XMLUtil.createParameterElement(serviceBean.getTargetNamespace(), methodName, parameterMap);
+		OMElement omElement = XMLUtil.createParameterElement(serviceBean.getTargetNamespace(),serviceBean.getWsdlType(), methodName, parameterMap);
 	    return omElement.toString();
 	}
 	
@@ -123,34 +124,31 @@ public class WsdlLoadServlet extends HttpServlet{
 	 * 获取方法调用的结果
 	 * @param request
 	 * @return
+	 * @throws AxisFault 
+	 * @throws DocumentException 
 	 */
 	@SuppressWarnings("unchecked")
-	private String getResultDATA(HttpServletRequest request) {
+	private String getResultDATA(HttpServletRequest request) throws AxisFault, DocumentException {
 		String serverName=request.getParameter("serverName");
 		String methodName=request.getParameter("methodName");
 		String value=request.getParameter("parameterXML");
-		String json="";
-		try {
-			ServiceBean serviceBean = getServiceBean(serverName);
-			if(serviceBean==null){
-				throw new IllegalArgumentException();
-			}
-			
-			Document document = DocumentHelper.parseText(value);
-			Element rootElement = document.getRootElement();
-			List<Element> elements = rootElement.elements();
-			
-			Map<String,Object> parameterMap=new HashMap<String,Object>();
-			for (Element element : elements) {
-				parameterMap.put(element.getName(), element.getTextTrim());
-			}
-			//调用
-			AxisCaller caller=new AxisCaller();
-			json = caller.caller(serviceBean.getEndpointURI(), serviceBean.getTargetNamespace(), methodName, parameterMap);
-		} catch (Exception e) {
-			json="";
-			e.printStackTrace();
+		String json=null;
+		ServiceBean serviceBean = getServiceBean(serverName);
+		if(serviceBean==null){
+			throw new IllegalArgumentException();
 		}
+		
+		Document document = DocumentHelper.parseText(value);
+		Element rootElement = document.getRootElement();
+		List<Element> elements = rootElement.elements();
+		
+		Map<String,Object> parameterMap=new HashMap<String,Object>();
+		for (Element element : elements) {
+			parameterMap.put(element.getName(), element.getTextTrim());
+		}
+		//调用
+		AxisCaller caller=new AxisCaller();
+		json = caller.caller(serviceBean.getEndpointURI(), serviceBean.getTargetNamespace(),serviceBean.getWsdlType(),methodName, parameterMap);	
 		return json;
 	}
 	

@@ -25,11 +25,12 @@ public class AxisCaller {
 	 * @param urlwsdl url地址
 	 * @param nameSpace 命名空间
 	 * @param methodName 调用的方法名称
+	 * @param methodName 
 	 * @param parameterMap 参数map
 	 * @return
 	 * @throws AxisFault 
 	 */
-	public String caller(String url,String nameSpace,String methodName, Map<String, Object> parameterMap) throws AxisFault {
+	public String caller(String url,String nameSpace,String wsdlType, String methodName, Map<String, Object> parameterMap) throws AxisFault {
 		OMElement result = null;
 		Options options = new Options();
 		// 指定调用WebService的URL
@@ -39,7 +40,7 @@ public class AxisCaller {
 		ServiceClient serviceClient = new ServiceClient();
 		serviceClient.setOptions(options);
 
-		OMElement parameterElement = XMLUtil.createParameterElement(nameSpace,methodName,parameterMap);
+		OMElement parameterElement = XMLUtil.createParameterElement(nameSpace,wsdlType,methodName,parameterMap);
         System.out.println(parameterElement.toString());
 		result = serviceClient.sendReceive(parameterElement);
 		log.debug("调用结果 "+result.toString());	
@@ -51,11 +52,11 @@ public class AxisCaller {
 	public static void main(String[] args) throws AxisFault {
 		AxisCaller caller=new AxisCaller();
 		Map<String, Object> parameterMap=new HashMap<String, Object>();
-		parameterMap.put("theStockCode", "123");
-		parameterMap.put("theImageType", "123");
+		parameterMap.put("lgan", "123");
+		parameterMap.put("lover", "123");
 		
-		//String caller2=caller.caller("http://www.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl", "http://WebXml.com.cn/", "getRegionDataset", parameterMap);
-		String caller2 = caller.caller("http://www.webxml.com.cn/webservices/ChinaStockSmallImageWS.asmx?wsdl", "http://WebXml.com.cn/", "getSmallImageByte", parameterMap);
-		System.out.println(caller2);
+		//String cal=caller.caller("http://www.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl", "http://WebXml.com.cn/","soap", "getRegionDataset", parameterMap);
+		String cal = caller.caller("http://192.168.8.144:9999/services/helloWord?wsdl", "http://service.cytoscape.com/","xsd", "sayHi", parameterMap);
+		System.out.println(cal);
 	}
 }

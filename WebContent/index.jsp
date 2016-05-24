@@ -80,12 +80,16 @@ body {
 				onSubmit : function() {
 				},
 				success : function(data) {
-					data = eval("(" + data + ")");
-					closeForm();
-					$('#wsdlTree').tree({
-						data : data
-					});
-				}
+					if(data==null||data==''){
+						alert('url解析失败');
+					}else{
+						data = eval("(" + data + ")");
+						closeForm();
+						$('#wsdlTree').tree({
+							data : data
+						});
+					}
+				},
 			});
 		}
 		//点击运行 
@@ -98,6 +102,10 @@ body {
 			    	success:function(data){
 						$("#resultPanel").html(data);
 						$("#resultPanel").val($("#resultPanel").text());
+			    	},
+			    	error:function(XMLHttpRequest,textStatus,errorThrown){
+			    		$("#resultPanel").html(textStatus+"\r\n"+errorThrown);
+			    		$("#resultPanel").val($("#resultPanel").text());
 			    	}
 			});
 		});
