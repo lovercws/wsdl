@@ -39,5 +39,6 @@ public class XSDCaller {
         //发送并得到结果，至此，调用成功，并得到了结果  
         OMElement result = sender.sendReceive(method);  
         System.out.println(result);
+        
 	}
 }
